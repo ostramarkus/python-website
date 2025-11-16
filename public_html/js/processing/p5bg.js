@@ -6,7 +6,7 @@ class Particle {
 	}
 
 	display() {
-		let distLimit = 140; 
+		let distLimit = 140;
 		noStroke()
 		circle(this.pos.x, this.pos.y, 2);
 
@@ -28,7 +28,7 @@ class Particle {
 		if (this.pos.x > width) this.pos.x = 0;
 		if (this.pos.x < 0) this.pos.x = width
 		if (this.pos.y > height) this.pos.y = 0;
-		if (this.pos.y < 0) this.pos.y = height;		
+		if (this.pos.y < 0) this.pos.y = height;
 	}
 }
 

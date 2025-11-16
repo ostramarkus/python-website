@@ -140,11 +140,14 @@ header a {
     gap: 1rem;
 }
 
-#light-dark-mode {
+#header-icons img {
     width: 1.3rem;
-    filter: invert(80%);
     cursor: pointer;
-    margin-top: 6px;
+    margin-top: 6px;    
+}
+
+#light-dark-mode {
+    filter: invert(80%);
 }
 
 #main-nav {
@@ -368,6 +371,12 @@ section {
     border-radius: var(--border-radius);
 }
 
+section img {
+    padding: 0.5em;
+    border-radius: 4px;
+    box-shadow: 3px 3px 3px rgba(0,0,0,0.1);
+    background-color: #fff;
+}
 
 article {
     background-color: var(--article-bg);
@@ -584,6 +593,8 @@ button.copy-btn {
 button.copy-btn img {
     width: 1rem;
     display: block;
+    background-color: transparent;
+    padding: 0;
 }
 
 button.copy-btn:hover {
@@ -631,6 +642,46 @@ button.copy-btn:hover {
     }
 }
 
+/* Focus mode */
+
+.focus-mode {
+    background-color: var(--main-background);
+}
+
+.focus-mode section {
+    margin: 0;
+    border: 1px solid var(--border1);
+}
+
+.focus-mode aside {
+    display: none !important;
+}
+
+.focus-mode header {
+    justify-content: right;
+    background-color: transparent;
+    opacity: 0.5;
+    box-shadow: none;
+}
+
+.focus-mode #logo-link {
+    display: none;
+}
+
+.focus-mode #main-nav {
+    display: none;
+}
+
+.focus-mode #wrap {
+    justify-content: center;
+}
+
+.focus-mode #focus-toggle {
+    display: block;
+    position:sticky;
+    top: 1em;
+    right: 1em;
+} 
 @media (max-width: 1000px) {
     #menu-toggle {
         display: block;

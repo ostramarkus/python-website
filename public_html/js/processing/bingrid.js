@@ -1,6 +1,6 @@
 let noiseRes = 0.3;
 let noiseSpeed = 0.02;
-let	cellSize = 24;
+let cellSize = 24;
 let pixels = [];
 
 function setup() {
@@ -33,7 +33,7 @@ function createBinGrid() {
 				fill(255, 60);
 			}
 
-			if(pixels.indexOf([x, y]) != -1) {
+			if (pixels.indexOf([x, y]) != -1) {
 				fill(255, 100);
 			}
 
@@ -44,7 +44,7 @@ function createBinGrid() {
 
 function mousePressed() {
 	let gridX = ceil(mouseX / cellSize)
-	let gridY = ceil(mouseY / cellSize) 
+	let gridY = ceil(mouseY / cellSize)
 	pixels.push([gridX, gridY])
 	console.log(pixels)
 }

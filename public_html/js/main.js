@@ -19,6 +19,28 @@ document.getElementById('mode-toggle').addEventListener('click', async () => {
   setTheme();
 });
 
+// Focus-mode-toggle
+document.getElementById('focus-toggle').addEventListener('click', async () => {
+  const body = document.getElementsByTagName('body')[0];
+  const docu = document.documentElement;  
+
+  if (docu.classList.contains("focus-mode")) {
+    docu.exitFullscreen();
+  } else {
+    docu.requestFullscreen();
+  }
+
+  body.classList.toggle('focus-mode');
+});
+
+// Focus heading
+document.querySelectorAll('.heading-nr').forEach(hnr => {
+  hnr.addEventListener('click', async () => {
+    this.requestFullscreen();
+  });
+});
+
+
 // Nav-toggle
 document.getElementById('menu-toggle').addEventListener('click', async () => {
   const navAside = document.getElementById('nav-container');
