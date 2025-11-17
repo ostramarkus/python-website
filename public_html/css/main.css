@@ -650,8 +650,10 @@ button.copy-btn:hover {
 
 .focus-mode section {
     margin: 0;
-    border: 1px solid var(--border1);
+    border: none;
+    padding-top: 1rem;
 }
+
 
 .focus-mode aside {
     display: none !important;
@@ -676,12 +678,11 @@ button.copy-btn:hover {
     justify-content: center;
 }
 
-.focus-mode #focus-toggle {
-    display: block;
-    position:sticky;
-    top: 1em;
-    right: 1em;
-} 
+
+.focus-mode .heading-nr {
+    display: none;
+}
+
 @media (max-width: 1000px) {
     #menu-toggle {
         display: block;
