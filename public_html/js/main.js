@@ -23,13 +23,6 @@ document.getElementById('mode-toggle').addEventListener('click', async () => {
 document.getElementById('focus-toggle').addEventListener('click', async () => {
   const body = document.getElementsByTagName('body')[0];
   const docu = document.documentElement;  
-
-  if (docu.classList.contains("focus-mode")) {
-    docu.exitFullscreen();
-  } else {
-    docu.requestFullscreen();
-  }
-
   body.classList.toggle('focus-mode');
 });
 

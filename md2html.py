@@ -5,13 +5,15 @@ from bs4 import BeautifulSoup
 
 class Document:
     """Main class for md2html. Represents a document to be converted."""
-    def __init__(self, md_path, template_path, title="Untitled", insert_tag="main", id=""):
+    def __init__(self, md_path, template_path, title="Untitled", insert_tag="main", url="", html_file="index.html", id=""):
         self.bs4_parser = 'html.parser'
         self.id = id
         self.md_path = md_path
         self.template_path = template_path
         self.title = title
+        self.html_file = html_file        
         self.verbose = False
+        self.url = url
 
         self.content_soup = None 
         self.template_soup = None
@@ -29,7 +31,7 @@ class Document:
         # Load template and insert content
         template = Template(self, template_path)
         template.set_title(self.title)
-        template.insert_content(self.content_soup, 'main')
+        template.insert_content(self.content_soup, insert_tag)
 
         if not template.soup.aside:
             raise ValueError("Template missing <aside> for table of contents.")
@@ -42,7 +44,7 @@ class Document:
 
     def process_content(self):
         """Clean and structure Markdown soup before merging with template."""
-        return (SoupProcessor(self.load_markdown(self.md_path))
+        return (SoupProcessor(self.load_markdown(self.md_path), html_file=self.html_file, url=self.url)
             .clean_up_headings()
             .id_headings()
             .wrap_elements('h2', 'section', ['h2'])
@@ -120,8 +122,11 @@ class Document:
 
 class SoupProcessor:
     """Processes Beautiful Soup objects"""
-    def __init__(self, soup):
+    def __init__(self, soup, html_file="index.html", url="https://python.ostrawebb.se"):
         self.soup = soup   
+        self.html_file = html_file
+        self.url = url
+        
 
     def id_headings(self):
         """Clean up headings by removing <strong> tags and empty headings."""
@@ -152,6 +157,8 @@ class SoupProcessor:
         return self
 
     def number_headings(self):
+        # TODO: Implement in site-config.yaml
+                
         for i, section in enumerate(self.soup.find_all(['section']), start=1):
             span = self.soup.new_tag('span')
             span['class'] = 'heading-nr'
@@ -159,11 +166,23 @@ class SoupProcessor:
             h2 = section.find('h2')            
             h2.insert(0, span)
             
+            link_a = self.soup.new_tag('a')
+            link_a['data-link'] = self.url + self.html_file + "#" + h2['id']
+            link_a['class'] = 'perma-link'
+            link_a.string = '🔗'
+            h2.append(link_a)            
+        
             for j, heading in enumerate(section.find_all(['h3', 'h4']), start=1):
-                span = self.soup.new_tag('span')
-                span['class'] = 'heading-nr'
-                span.string = str(i) + '.' + str(j) + ' '
-                heading.insert(0, span)
+                nr_span = self.soup.new_tag('span')
+                nr_span['class'] = 'heading-nr'
+                nr_span.string = str(i) + '.' + str(j) + ' '
+                heading.insert(0, nr_span)
+                
+                link_a = self.soup.new_tag('a')
+                link_a['class'] = 'perma-link'
+                link_a['href'] = self.url + self.html_file + "#" + heading['id']
+                link_a.string = '🔗'
+                heading.append(link_a)
 
         return self
 
@@ -225,7 +244,7 @@ class TOC:
             section_title_tag = section.find('h2')
             section_id = section_title_tag['id']
             if section_title_tag:
-                section_title = section_title_tag.text
+                section_title = section_title_tag.text.replace('🔗', '')
             else:
                 continue
                 
@@ -234,7 +253,7 @@ class TOC:
             # Iterate all sub-headings and save id-attribute and inner text of headings           
             section_headings = []
             for heading in section.find_all(['h3', 'h4']):
-                heading_title = heading.text
+                heading_title = heading.text.replace('🔗', '')
                 try:
                     heading_id = heading['id']
                 except KeyError:

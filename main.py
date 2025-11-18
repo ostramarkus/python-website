@@ -21,7 +21,11 @@ def main():
         template_path = 'templates/main.html'
         title = page['title']
 
-        document = md2html.Document(md_path, template_path, title=title, id=page['id'])
+        document = md2html.Document(md_path, template_path, 
+            title=title, id=page['id'], 
+            html_file=page['html_file'], 
+            url="https://python.ostrawebb.se/"
+        )
         document.insert_main_nav(navigation)
         document.save_html('public_html/' + page['html_file'])
 
