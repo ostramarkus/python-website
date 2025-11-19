@@ -169,7 +169,7 @@ class SoupProcessor:
             link_a = self.soup.new_tag('a')
             link_a['data-link'] = self.url + self.html_file + "#" + h2['id']
             link_a['class'] = 'perma-link'
-            link_a.string = '🔗'
+            link_a.string = '#'
             h2.append(link_a)            
         
             for j, heading in enumerate(section.find_all(['h3', 'h4']), start=1):
@@ -181,7 +181,7 @@ class SoupProcessor:
                 link_a = self.soup.new_tag('a')
                 link_a['class'] = 'perma-link'
                 link_a['href'] = self.url + self.html_file + "#" + heading['id']
-                link_a.string = '🔗'
+                link_a.string = '#'
                 heading.append(link_a)
 
         return self
@@ -244,7 +244,7 @@ class TOC:
             section_title_tag = section.find('h2')
             section_id = section_title_tag['id']
             if section_title_tag:
-                section_title = section_title_tag.text.replace('🔗', '')
+                section_title = section_title_tag.text.replace('#', '')
             else:
                 continue
                 
@@ -253,7 +253,7 @@ class TOC:
             # Iterate all sub-headings and save id-attribute and inner text of headings           
             section_headings = []
             for heading in section.find_all(['h3', 'h4']):
-                heading_title = heading.text.replace('🔗', '')
+                heading_title = heading.text.replace('#', '')
                 try:
                     heading_id = heading['id']
                 except KeyError:

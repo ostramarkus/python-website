@@ -67,12 +67,10 @@ html {
 body {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
-    background: url("../img/hexbg.png"), linear-gradient(345deg, rgba(0, 0, 0, 1) 0%, var(--second-accent) 100%);
-    background-size: 80px 80px, 100%;
-    background-blend-mode: color-dodge;
-    background-attachment: fixed;
-    margin: 0;
+    background-color: var(--main-background);
     color: var(--main-text-color);
+    margin: 0;
+    padding: 0;
 }
 
 body.dark-mode {
@@ -91,13 +89,12 @@ canvas {
 
 #wrap {
     display: flex;
-    gap: 2rem;
     align-items: flex-start;
 
 }
 
 main {
-    max-width: 840px;
+    max-width: 780px;
 }
 
 
@@ -255,6 +252,8 @@ h5 {
 
 
 .perma-link {
+    color: var(--border1);
+    margin-left: 0.4rem;
     display: none;
     font-size: 0.9em;
     cursor: pointer;
@@ -296,6 +295,8 @@ h4 .heading-nr {
     text-align: center;
     display: inline-block;
     border-radius: 3px;
+
+    display: none;
 }
 
 .tag_basic .heading-nr {
@@ -312,7 +313,7 @@ h4 .heading-nr {
 
 
 section li {
-    margin-bottom: 0.5em;
+    margin-bottom: 0.3em;
     font-size: 1rem;
 }
 
@@ -387,13 +388,54 @@ td code {
 
 section {
     box-sizing: border-box;
-    margin: 2rem 0;
     width: 100%;
-    padding: 3rem 3rem;
+    padding: 2rem 3rem 1rem;
     background-size: 100% 300px;
     background-color: var(--main-background);
     background-repeat: no-repeat;
-    border-radius: var(--border-radius);
+    border-right: 1px solid var(--border1);
+
+}
+
+section aside {
+    padding: 0rem;
+    margin-bottom: 1rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: end;
+}
+
+/*
+section aside {
+    transform: rotate(-1deg);
+    padding: 0 2rem;
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    gap: 2em;
+    justify-content: end;
+}
+*/
+
+section aside p {
+    font-size: 1.2rem;
+    width: 50%;
+    transform: rotate(-0.5deg);
+    float: right;
+    color: var(--primary);
+    line-height: 1; 
+    font-family: Caveat, sans-serif;
+    margin: 0;
+    max-width: 250px;
+    padding: 0em;
+}
+
+.marked {
+    background-image: url('../img/red-underline.png');
+    background-position: bottom left;
+    background-size: 70%;
+    padding-bottom: 1em;
+    background-repeat: no-repeat;
 }
 
 section img {
@@ -783,6 +825,15 @@ button.copy-btn:hover {
 
     section img {
         width: 100%;
+    }
+
+    section aside {
+        background-color: red;
+        position: static;
+        margin-top: 0rem;
+        max-width: 80%;
+        transform: rotate(-2deg);
+        padding: 0.3rem;
     }
 
     #nav-container {

@@ -22,7 +22,7 @@ document.getElementById('mode-toggle').addEventListener('click', async () => {
 // Focus-mode-toggle
 document.getElementById('focus-toggle').addEventListener('click', async () => {
   const body = document.getElementsByTagName('body')[0];
-  const docu = document.documentElement;  
+  const docu = document.documentElement;
   body.classList.toggle('focus-mode');
 });
 
@@ -59,28 +59,28 @@ document.querySelectorAll('table').forEach(table => {
 // Remove nav-menu if link is clicked
 document.querySelectorAll('#toc a').forEach(link => {
   link.addEventListener('click', async () => {
-    let navAside = document.getElementById('nav-container');  
+    let navAside = document.getElementById('nav-container');
     document.getElementById('nav-container').classList.remove('nav-open');
   });
 });
 
 // Smooth scrolling functionality using JavaScript
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const targetElement = 
-              document.querySelector(this.getAttribute('href'));
-              console.log(targetElement);
-        window.scrollTo({
-            top: targetElement.offsetTop - 80,
-            behavior: 'instant'
-        });
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const targetElement =
+      document.querySelector(this.getAttribute('href'));
+    console.log(targetElement);
+    window.scrollTo({
+      top: targetElement.offsetTop - 80,
+      behavior: 'instant'
     });
+  });
 });
 
 // Insert copy-button in code blocks
 document.querySelectorAll('pre').forEach(pre => {
-  let copySymbol = '<img src="img/copy.svg" alt="Kopiera">' 
+  let copySymbol = '<img src="img/copy.svg" alt="Kopiera">'
   const button = document.createElement('button');
   button.innerHTML = copySymbol;
   button.className = 'copy-btn';

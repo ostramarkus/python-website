@@ -14,7 +14,7 @@
 </ul>
 <h3 id="fargkoder-for-att-visa-nivan"><span class="heading-nr">1.2 </span>F&auml;rgkoder f&ouml;r att visa niv&aring;n</h3>
 <p>M&aring;nga delar av guiden &auml;r f&auml;rgkodade f&ouml;r att visa sv&aring;righetsniv&aring;n p&aring; inneh&aring;llet:</p>
-<p><span class="text-basic">⏺ <strong>Gr&ouml;nt</strong></span> anger grundl&auml;ggande kunskap som man b&ouml;r vara v&auml;l f&ouml;rtrogen med. Det h&auml;r &auml;r s&aring;dant som &auml;r bra att l&auml;ra sig utantill f&ouml;r att kunna programmera effektivt med Python.</p>
-<p><span class="text-intermediate">⏹ <strong>Gult</strong></span> betyder att exemplet &auml;r lite mer avancerat, eller att det som exemplet tar upp inte &auml;r lika centralt. Man b&ouml;r f&ouml;rst&aring; dessa exempel, men det &auml;r inget som man beh&ouml;ver kunna utantill.</p>
-<p><span class="text-advanced"><strong>◆ R&ouml;tt</span></strong> betyder att det som tas upp &auml;r &auml;nnu mer avancerat, eller &auml;r n&aring;got som inte &auml;r s&aring; vanligt f&ouml;rekommande inom Python p&aring; nyb&ouml;rjarniv&aring;.</p></section></main>
+<p><span class="text-basic"><strong>Gr&ouml;nt</strong></span> anger grundl&auml;ggande kunskap som man b&ouml;r vara v&auml;l f&ouml;rtrogen med. Det h&auml;r &auml;r s&aring;dant som &auml;r bra att l&auml;ra sig utantill f&ouml;r att kunna programmera effektivt med Python.</p>
+<p><span class="text-intermediate"><strong>Gult</strong></span> betyder att exemplet &auml;r lite mer avancerat, eller att det som exemplet tar upp inte &auml;r lika centralt. Man b&ouml;r f&ouml;rst&aring; dessa exempel, men det &auml;r inget som man beh&ouml;ver kunna utantill.</p>
+<p><span class="text-advanced"><strong>R&ouml;tt</span></strong> betyder att det som tas upp &auml;r &auml;nnu mer avancerat, eller &auml;r n&aring;got som inte &auml;r s&aring; vanligt f&ouml;rekommande inom Python p&aring; nyb&ouml;rjarniv&aring;.</p></section></main>
 </div>

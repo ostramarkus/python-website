@@ -4,69 +4,109 @@
     "year": 2010,
     "imdb_rating": 8.8,
     "director": "Christopher Nolan",
-    "main_cast": ["Leonardo DiCaprio", "Joseph Gordon-Levitt", "Ellen Page"]
+    "main_cast": [
+      "Leonardo DiCaprio",
+      "Joseph Gordon-Levitt",
+      "Ellen Page"
+    ]
   },
   {
     "title": "Interstellar",
     "year": 2014,
     "imdb_rating": 8.7,
     "director": "Christopher Nolan",
-    "main_cast": ["Matthew McConaughey", "Anne Hathaway", "Jessica Chastain"]
+    "main_cast": [
+      "Matthew McConaughey",
+      "Anne Hathaway",
+      "Jessica Chastain"
+    ]
   },
   {
     "title": "The Matrix",
     "year": 1999,
     "imdb_rating": 8.7,
     "director": "Lana Wachowski & Lilly Wachowski",
-    "main_cast": ["Keanu Reeves", "Laurence Fishburne", "Carrie-Anne Moss"]
+    "main_cast": [
+      "Keanu Reeves",
+      "Laurence Fishburne",
+      "Carrie-Anne Moss"
+    ]
   },
   {
     "title": "Blade Runner 2049",
     "year": 2017,
     "imdb_rating": 8.0,
     "director": "Denis Villeneuve",
-    "main_cast": ["Ryan Gosling", "Harrison Ford", "Ana de Armas"]
+    "main_cast": [
+      "Ryan Gosling",
+      "Harrison Ford",
+      "Ana de Armas"
+    ]
   },
   {
     "title": "Ex Machina",
     "year": 2014,
     "imdb_rating": 7.7,
     "director": "Alex Garland",
-    "main_cast": ["Domhnall Gleeson", "Alicia Vikander", "Oscar Isaac"]
+    "main_cast": [
+      "Domhnall Gleeson",
+      "Alicia Vikander",
+      "Oscar Isaac"
+    ]
   },
   {
     "title": "Arrival",
     "year": 2016,
     "imdb_rating": 7.9,
     "director": "Denis Villeneuve",
-    "main_cast": ["Amy Adams", "Jeremy Renner", "Forest Whitaker"]
+    "main_cast": [
+      "Amy Adams",
+      "Jeremy Renner",
+      "Forest Whitaker"
+    ]
   },
   {
     "title": "Avatar",
     "year": 2009,
     "imdb_rating": 7.9,
     "director": "James Cameron",
-    "main_cast": ["Sam Worthington", "Zoe Saldaña", "Sigourney Weaver"]
+    "main_cast": [
+      "Sam Worthington",
+      "Zoe Saldaña",
+      "Sigourney Weaver"
+    ]
   },
   {
     "title": "Avatar: The Way of Water",
     "year": 2022,
     "imdb_rating": 7.5,
     "director": "James Cameron",
-    "main_cast": ["Sam Worthington", "Zoe Saldaña", "Sigourney Weaver"]
+    "main_cast": [
+      "Sam Worthington",
+      "Zoe Saldaña",
+      "Sigourney Weaver"
+    ]
   },
   {
     "title": "Independence Day",
     "year": 1996,
     "imdb_rating": 7.0,
     "director": "Roland Emmerich",
-    "main_cast": ["Will Smith", "Bill Pullman", "Jeff Goldblum"]
+    "main_cast": [
+      "Will Smith",
+      "Bill Pullman",
+      "Jeff Goldblum"
+    ]
   },
   {
     "title": "The Andromeda Strain",
     "year": 1971,
     "imdb_rating": 7.2,
     "director": "Robert Wise",
-    "main_cast": ["Arthur Hill", "James Olson", "Kate Reid"]
+    "main_cast": [
+      "Arthur Hill",
+      "James Olson",
+      "Kate Reid"
+    ]
   }
 ]
