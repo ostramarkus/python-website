@@ -60,13 +60,13 @@
    outline: 1px solid #f00 !important;
 }
 */
+
 html {
     height: 100%;
 }
 
 body {
     font-family: "Open Sans", sans-serif;
-    font-size: 16px;
     background-color: var(--main-background);
     color: var(--main-text-color);
     margin: 0;
@@ -179,15 +179,15 @@ header a {
 
 #main-nav .active {
     color: #fff;
-    border-bottom: 2px solid #fff;
+    border-bottom: 4px solid #fff;
 }
 
 #link-index .active {
-    border-color: var(--primary);
+    border-color: var(--third-accent);
 }
 
 #link-grunder .active {
-    border-color: var(--third-accent);
+    border-color: var(--intermediate);
 }
 
 #link-fortsattning .active {
@@ -195,7 +195,7 @@ header a {
 }
 
 #link-tillampningar .active {
-    border-color: var(--intermediate);
+    border-color: var(--advanced);
 }
 
 #link-verktyg .active {
@@ -229,9 +229,10 @@ main a {
 }
 
 h2 {
-    font-size: 2.3em;
-    font-weight: 700;
-    margin-bottom: 1.5rem;
+    font-family: Yrsa, serif;
+    font-size: 3em;
+    font-weight: 400;
+    margin-bottom: 1rem;
     margin-top: 0px;
     color: var(--heading-accent);
 }
@@ -252,21 +253,23 @@ h5 {
 
 
 .perma-link {
-    color: var(--border1);
+    color: transparent;
     margin-left: 0.4rem;
-    display: none;
     font-size: 0.9em;
     cursor: pointer;
+    display: inline;
+
     text-decoration: none;
-    transition: 1s;
+    transition: 0.3s;
 }
 
 h2:hover .perma-link,
 h3:hover .perma-link,
 h4:hover .perma-link {
-    display: inline;
+    color: var(--border1);
 }
 
+article,
 article:has(.tag_basic),
 article:has(.tag_intermediate),
 article:has(.tag_advanced) {
@@ -296,7 +299,7 @@ h4 .heading-nr {
     display: inline-block;
     border-radius: 3px;
 
-    display: none;
+    /* display: none; */
 }
 
 .tag_basic .heading-nr {
@@ -321,8 +324,8 @@ h3+p {
     margin-top: 0;
 }
 
-p {
-    margin: 1em 0;
+p, ul {
+    margin: 0.8em 0;
 }
 
 p,
@@ -496,11 +499,11 @@ pre {
 
 #nav-container {
     box-sizing: border-box;
-    width: 250px;
+    width: 280px;
     position: sticky;
     top: 52px;
     height: 100vh;
-    padding: 2.8em 2em;
+    padding: 2.8em 2em 5.5em;
     overflow: auto;
     background-color: var(--main-background);
     box-shadow: 0 6px 6px rgba(0, 0, 0, 0.1);

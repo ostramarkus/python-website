@@ -1,214 +1,53 @@
 <!DOCTYPE html>
 
 <html lang="sv">
-
 <head>
-    <meta charset="utf-8">
-    <meta content="IE=edge" http-equiv="X-UA-Compatible">
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <link href="img/python-logo-only.png" rel="shortcut icon">
-    <title>Python - forts&auml;ttning</title>
-    <!-- Syntax highlighting theme -->
-    <link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/atom-one-dark-reasonable.css"
-        rel="stylesheet">
-    <!-- Google fonts -->
-    <link href="https://fonts.googleapis.com" rel="preconnect">
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;display=swap"
-        rel="stylesheet">
-    <!-- Main stylesheet-->
-    <link href="css/main.css" rel="stylesheet">
-    <!-- Syntax highlighting code -->
-    <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+<meta charset="utf-8">
+<meta content="IE=edge" http-equiv="X-UA-Compatible">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<link href="img/python-logo-only.png" rel="shortcut icon">
+<title>Python - forts&auml;ttning</title>
+<!-- Syntax highlighting theme -->
+<link href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/styles/atom-one-dark-reasonable.css" rel="stylesheet">
+<!-- Google fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect">
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect">
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&amp;family=Yrsa:ital,wght@0,300..700;1,300..700&amp;display=swap" rel="stylesheet">
+<!-- Main stylesheet-->
+<link href="css/main.css" rel="stylesheet">
+<!-- Syntax highlighting code -->
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.11.1/build/highlight.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
 </head>
-
 <body id="fortsattning">
-    <header>
-        <a href="index.html" id="logo-link">
-            <div id="header-title">
-                <div id="logo-container">
-                    <img alt="Python logo" src="img/python-logo-only.png">
-                </div>
-                <h1>Programmering med Python</h1>
-            </div>
-        </a>
-        <nav id="main-nav">
-            <ul>
-                <li id="link-index"><a href="index.html">Hem</a></li>
-                <li id="link-grunder"><a href="grunder.html">Grunder</a></li>
-                <li id="link-fortsattning"><a class="active" href="fortsattning.html">Forts&auml;ttning</a></li>
-                <li id="link-tillampningar"><a href="tillampningar.html">Till&auml;mpningar</a></li>
-                <li id="link-verktyg"><a href="utveckling.html">Utvecklingsmilj&ouml; och verktyg</a></li>
-            </ul>
-        </nav>
-        <div id="header-icons">
-            <div id="focus-toggle" title="Toggle focus mode"><img alt="Focus mode" id="focus-mode-icon"
-                    src="img/focus.svg"></div>
-            <div id="mode-toggle" title="Toggle light/dark theme"><img alt="Light/dark-mode" id="light-dark-mode"
-                    src="img/dark-theme.svg"></div>
-            <div id="menu-toggle">☰</div>
-        </div>
-    </header>
-    <div id="wrap">
-        <aside id="nav-container">
-            <h4>Python - forts&auml;ttning</h4>
-            <ul id="toc">
-                <li class="section-link"><a href="#egna-moduler">1. Egna moduler</a>
-                    <ul>
-                        <li class="article-link"><a class="tag_basic" href="#exempel-pa-en-egen-modul">1.1 Exempel
-                                p&aring; en egen modul</a></li>
-                        <li class="article-link"><a class="tag_intermediate"
-                                href="#ange-ett-alias-for-importerad-modul">1.2 Ange ett alias f&ouml;r importerad
-                                modul</a></li>
-                        <li class="article-link"><a class="tag_intermediate" href="#importera-enstaka-funktioner">1.3
-                                Importera enstaka funktioner</a></li>
-                    </ul>
-                </li>
-                <li class="section-link"><a href="#anvanda-en-main-funktion">2. Anv&auml;nda en main-funktion</a>
-                    <ul>
-                        <li class="article-link"><a class="tag_intermediate" href="#program-med-main-funktion">2.1
-                                Program med main-funktion</a></li>
-                    </ul>
-                </li>
-                <li class="section-link"><a href="#list-comprehension">3. List comprehension</a>
-                    <ul>
-                        <li class="article-link"><a class="tag_basic" href="#enkel-list-comprehension">3.1 Enkel list
-                                comprehension</a></li>
-                        <li class="article-link"><a class="tag_basic" href="#filtrera-med-list-comprehensions">3.2
-                                Filtrera med list comprehensions</a></li>
-                        <li class="article-link"><a class="tag_advanced"
-                                href="#skapa-en-ny-lista-utifran-en-funktions-returvarden">3.3 Skapa en ny lista
-                                utifr&aring;n en funktions returv&auml;rden</a></li>
-                        <li class="article-link"><a class="tag_advanced" href="#sammanstallning-av-forekomst">3.4
-                                Sammanst&auml;llning av f&ouml;rekomst</a></li>
-                        <li class="article-link"><a class="tag_intermediate"
-                                href="#ta-ut-en-kolumn-fran-tabellstruktur-csv">3.5 Ta ut en kolumn fr&aring;n
-                                tabellstruktur (CSV)</a></li>
-                    </ul>
-                </li>
-                <li class="section-link"><a href="#oop-objektorienterad-programmering">4. OOP - Objektorienterad
-                        programmering</a>
-                    <ul>
-                        <li class="article-link"><a class="tag_intermediate" href="#begrepp-inom-oop">4.1 Begrepp inom
-                                OOP</a></li>
-                        <li class="article-link"><a class="tag_intermediate" href="#exempel-pa-en-klass">4.2 Exempel
-                                p&aring; en klass</a></li>
-                        <li class="article-link"><a class="tag_advanced" href="#arv-inom-oop">4.3 Arv inom OOP</a></li>
-                        <li class="article-link"><a class="tag_advanced"
-                                href="#exempel-pa-en-klass-for-ett-blogginlagg">4.4 Exempel p&aring; en klass f&ouml;r
-                                ett blogginl&auml;gg</a></li>
-                        <li class="article-link"><a class="generic"
-                                href="#nar-passar-objektorienterad-programmering">4.5 N&auml;r passar objektorienterad
-                                programmering ?</a></li>
-                    </ul>
-                </li>
-                <li class="section-link"><a href="#dataformatet-json">5. Dataformatet JSON</a>
-                    <ul>
-                        <li class="article-link"><a class="tag_basic" href="#json-formatet">5.1 JSON-formatet</a></li>
-                        <li class="article-link"><a class="generic" href="#exempel-pa-json-data">5.2 Exempel p&aring;
-                                JSON-data</a></li>
-                        <li class="article-link"><a class="tag_intermediate"
-                                href="#lasa-och-tolka-json-data-fran-fil">5.3 L&auml;sa och tolka JSON-data fr&aring;n
-                                fil</a></li>
-                        <li class="article-link"><a class="tag_intermediate" href="#spara-python-data-som-json">5.4
-                                Spara Python-data som JSON</a></li>
-                    </ul>
-                </li>
-                <li class="section-link"><a href="#avancerad-hantering-av-listor">6. Avancerad hantering av listor</a>
-                    <ul>
-                        <li class="article-link"><a class="tag_intermediate"
-                                href="#funktionen-zip-para-ihop-varden-fran-listor">6.1 Funktionen zip - para ihop
-                                v&auml;rden fr&aring;n listor</a></li>
-                        <li class="article-link"><a class="tag_intermediate"
-                                href="#uppackning-unpacking-av-samlingar">6.2 Uppackning (unpacking) av samlingar</a>
-                        </li>
-                        <li class="article-link"><a class="tag_intermediate" href="#enumerate">6.3 Enumerate</a></li>
-                        <li class="article-link"><a class="tag_advanced" href="#sortera-en-lista-av-dictionaries">6.4
-                                Sortera en lista av dictionaries</a></li>
-                        <li class="article-link"><a class="tag_advanced" href="#ga-igenom-tva-listor-samtidigt">6.5
-                                G&aring; igenom tv&aring; listor samtidigt</a></li>
-                    </ul>
-                </li>
-                <li class="section-link"><a href="#set-mangdteori-och-mangoperationer">7. Set - m&auml;ngdteori och
-                        m&auml;ngoperationer</a>
-                    <ul>
-                        <li class="article-link"><a class="tag_basic" href="#lagg-till-och-ta-bort-fran-ett-set">7.1
-                                L&auml;gg till och ta bort fr&aring;n ett set</a></li>
-                        <li class="article-link"><a class="tag_intermediate" href="#set-skillnader-difference">7.2 Set -
-                                skillnader: difference()</a></li>
-                        <li class="article-link"><a class="tag_intermediate" href="#set-overlappande-intersection">7.3
-                                Set - &ouml;verlappande: intersection()</a></li>
-                        <li class="article-link"><a class="tag_advanced" href="#forena-tva-set-union">7.4 F&ouml;rena
-                                tv&aring; set: union()</a></li>
-                        <li class="article-link"><a class="tag_intermediate" href="#delmangd-issubset">7.5 Delm&auml;ngd
-                                - issubset()</a></li>
-                    </ul>
-                </li>
-                <li class="section-link"><a href="#decorators">8. Decorators</a>
-                    <ul>
-                        <li class="article-link"><a class="tag_advanced" href="#vad-ar-en-decorator">8.1 Vad &auml;r en
-                                decorator?</a></li>
-                        <li class="article-link"><a class="tag_advanced" href="#exempel-pa-decorator">8.2 Exempel
-                                p&aring; decorator</a></li>
-                        <li class="article-link"><a class="tag_advanced" href="#varfor-decorators-ar-anvandbara">8.3
-                                Varf&ouml;r decorators &auml;r anv&auml;ndbara</a></li>
-                        <li class="article-link"><a class="tag_advanced" href="#vad-ar-args-och-kwargs">8.4 Vad &auml;r
-                                *args och **kwargs?</a></li>
-                        <li class="article-link"><a class="generic" href="#args">8.5 *args</a></li>
-                        <li class="article-link"><a class="tag_advanced" href="#exempel-pa-args">8.6 Exempel p&aring;
-                                *args</a></li>
-                        <li class="article-link"><a class="generic" href="#kwargs">8.7 **kwargs</a></li>
-                        <li class="article-link"><a class="tag_advanced" href="#exempel-pa-kwargs">8.8 Exempel p&aring;
-                                **kwargs</a></li>
-                        <li class="article-link"><a class="tag_advanced" href="#kombination-av-args-och-kwargs">8.9
-                                Kombination av *args och **kwargs</a></li>
-                    </ul>
-                </li>
-                <li class="section-link"><a href="#rekursion">9. Rekursion</a>
-                    <ul>
-                        <li class="article-link"><a class="tag_advanced" href="#berakna-fakultet">9.1 Ber&auml;kna
-                                fakultet</a></li>
-                        <li class="article-link"><a class="tag_advanced" href="#fibonnaci-serien">9.2
-                                Fibonnaci-serien</a></li>
-                        <li class="article-link"><a class="tag_advanced" href="#genomgang-av-filsystem">9.3
-                                Genomg&aring;ng av filsystem</a></li>
-                    </ul>
-                </li>
-                <li class="section-link"><a href="#kryptering">10. Kryptering</a>
-                    <ul>
-                        <li class="article-link"><a class="tag_advanced" href="#enkel-manuell-kryptering">10.1 Enkel
-                                manuell kryptering</a></li>
-                        <li class="article-link"><a class="generic" href="#hashing">10.2 Hashing</a></li>
-                    </ul>
-                </li>
-                <li class="section-link"><a href="#kombinatorik">11. Kombinatorik</a></li>
-                <li class="section-link"><a href="#pythons-standardbibliotek">12. Pythons standardbibliotek</a></li>
-            </ul>
-        </aside>
-        <main>
-            <h1 id="fortsattning-python">Forts&auml;ttning Python</h1>
-            <section>
-                <h2 id="egna-moduler"><span class="heading-nr">1. </span>Egna moduler<a class="perma-link"
-                        data-link="https://python.ostrawebb.se/fortsattning.html#egna-moduler">#</a></h2>
-                <p>Ett s&auml;tt att strukturera st&ouml;rre programmeringsprojekt &auml;r att <strong>flytta kod till
-                        egna moduler</strong>. P&aring; s&aring; s&auml;tt g&ouml;mmer man undan on&ouml;diga detaljer
-                    som inte &auml;r relevanta f&ouml;r huvudfl&ouml;det i programmet. Detta &auml;r en princip som i
-                    mjukvaruutveckling kallas f&ouml;r <strong>abstraktion</strong> (eng. <em>abstraction</em>).</p>
-                <p><strong>F&ouml;r att skapa en egen modul</strong> skapar man en ny python-fil i samma mapp som ens
-                    <em>huvudfil</em>. Se till att filen har fil&auml;ndelsen <strong><code>.py</code></strong>. I den
-                    nya filen l&auml;gger man den kod man vill flytta fr&aring;n huvudprogrammet - grupperat i
-                    <strong>funktioner</strong>. Namnet p&aring; filen (om man bortser fr&aring;n fil&auml;ndelsen) blir
-                    modulens namn.</p>
-                <p>Modulen importerar man sedan med <strong><code>import</code></strong> h&ouml;gst upp i ens
-                    <em>huvudprogram</em>. </p>
-                <article>
-                    <h4 class="tag_basic" id="exempel-pa-en-egen-modul"><span class="heading-nr">1.1 </span>Exempel
-                        p&aring; en egen modul<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#exempel-pa-en-egen-modul">#</a></h4>
-                    <h5 id="usermanager-py">usermanager.py</h5>
-                    <div class="code-container">
-                        <pre><code class="language-py">import random
+<header>
+<a href="index.html" id="logo-link">
+<div id="header-title">
+<div id="logo-container">
+<img alt="Python logo" src="img/python-logo-only.png">
+</div>
+<h1>Programmering med Python</h1>
+</div>
+</a>
+<nav id="main-nav"><ul><li id="link-index"><a href="index.html">Hem</a></li><li id="link-grunder"><a href="grunder.html">Grunder</a></li><li id="link-fortsattning"><a class="active" href="fortsattning.html">Forts&auml;ttning</a></li><li id="link-tillampningar"><a href="tillampningar.html">Till&auml;mpningar</a></li><li id="link-verktyg"><a href="utveckling.html">Utvecklingsmilj&ouml; och verktyg</a></li></ul></nav>
+<div id="header-icons">
+<div id="focus-toggle" title="Toggle focus mode"><img alt="Focus mode" id="focus-mode-icon" src="img/focus.svg"></div>
+<div id="mode-toggle" title="Toggle light/dark theme"><img alt="Light/dark-mode" id="light-dark-mode" src="img/dark-theme.svg"></div>
+<div id="menu-toggle">☰</div>
+</div>
+</header>
+<div id="wrap">
+<aside id="nav-container">
+<h4>Python - forts&auml;ttning</h4><ul id="toc"><li class="section-link"><a href="#egna-moduler">1. Egna moduler</a><ul><li class="article-link"><a class="tag_basic" href="#exempel-pa-en-egen-modul">1.1 Exempel p&aring; en egen modul</a></li><li class="article-link"><a class="tag_intermediate" href="#ange-ett-alias-for-importerad-modul">1.2 Ange ett alias f&ouml;r importerad modul</a></li><li class="article-link"><a class="tag_intermediate" href="#importera-enstaka-funktioner">1.3 Importera enstaka funktioner</a></li></ul></li><li class="section-link"><a href="#anvanda-en-main-funktion">2. Anv&auml;nda en main-funktion</a><ul><li class="article-link"><a class="tag_intermediate" href="#program-med-main-funktion">2.1 Program med main-funktion</a></li></ul></li><li class="section-link"><a href="#list-comprehension">3. List comprehension</a><ul><li class="article-link"><a class="tag_basic" href="#enkel-list-comprehension">3.1 Enkel list comprehension</a></li><li class="article-link"><a class="tag_basic" href="#filtrera-med-list-comprehensions">3.2 Filtrera med list comprehensions</a></li><li class="article-link"><a class="tag_advanced" href="#skapa-en-ny-lista-utifran-en-funktions-returvarden">3.3 Skapa en ny lista utifr&aring;n en funktions returv&auml;rden</a></li><li class="article-link"><a class="tag_advanced" href="#sammanstallning-av-forekomst">3.4 Sammanst&auml;llning av f&ouml;rekomst</a></li><li class="article-link"><a class="tag_intermediate" href="#ta-ut-en-kolumn-fran-tabellstruktur-csv">3.5 Ta ut en kolumn fr&aring;n tabellstruktur (CSV)</a></li></ul></li><li class="section-link"><a href="#oop-objektorienterad-programmering">4. OOP - Objektorienterad programmering</a><ul><li class="article-link"><a class="tag_intermediate" href="#begrepp-inom-oop">4.1 Begrepp inom OOP</a></li><li class="article-link"><a class="tag_intermediate" href="#exempel-pa-en-klass">4.2 Exempel p&aring; en klass</a></li><li class="article-link"><a class="tag_advanced" href="#arv-inom-oop">4.3 Arv inom OOP</a></li><li class="article-link"><a class="tag_advanced" href="#exempel-pa-en-klass-for-ett-blogginlagg">4.4 Exempel p&aring; en klass f&ouml;r ett blogginl&auml;gg</a></li><li class="article-link"><a class="generic" href="#nar-passar-objektorienterad-programmering">4.5 N&auml;r passar objektorienterad programmering ?</a></li></ul></li><li class="section-link"><a href="#dataformatet-json">5. Dataformatet JSON</a><ul><li class="article-link"><a class="tag_basic" href="#json-formatet">5.1 JSON-formatet</a></li><li class="article-link"><a class="generic" href="#exempel-pa-json-data">5.2 Exempel p&aring; JSON-data</a></li><li class="article-link"><a class="tag_intermediate" href="#lasa-och-tolka-json-data-fran-fil">5.3 L&auml;sa och tolka JSON-data fr&aring;n fil</a></li><li class="article-link"><a class="tag_intermediate" href="#spara-python-data-som-json">5.4 Spara Python-data som JSON</a></li></ul></li><li class="section-link"><a href="#avancerad-hantering-av-listor">6. Avancerad hantering av listor</a><ul><li class="article-link"><a class="tag_intermediate" href="#funktionen-zip-para-ihop-varden-fran-listor">6.1 Funktionen zip - para ihop v&auml;rden fr&aring;n listor</a></li><li class="article-link"><a class="tag_intermediate" href="#uppackning-unpacking-av-samlingar">6.2 Uppackning (unpacking) av samlingar</a></li><li class="article-link"><a class="tag_intermediate" href="#enumerate">6.3 Enumerate</a></li><li class="article-link"><a class="tag_advanced" href="#sortera-en-lista-av-dictionaries">6.4 Sortera en lista av dictionaries</a></li><li class="article-link"><a class="tag_advanced" href="#ga-igenom-tva-listor-samtidigt">6.5 G&aring; igenom tv&aring; listor samtidigt</a></li></ul></li><li class="section-link"><a href="#set-mangdteori-och-mangoperationer">7. Set - m&auml;ngdteori och m&auml;ngoperationer</a><ul><li class="article-link"><a class="tag_basic" href="#lagg-till-och-ta-bort-fran-ett-set">7.1 L&auml;gg till och ta bort fr&aring;n ett set</a></li><li class="article-link"><a class="tag_intermediate" href="#set-skillnader-difference">7.2 Set - skillnader: difference()</a></li><li class="article-link"><a class="tag_intermediate" href="#set-overlappande-intersection">7.3 Set - &ouml;verlappande: intersection()</a></li><li class="article-link"><a class="tag_advanced" href="#forena-tva-set-union">7.4 F&ouml;rena tv&aring; set: union()</a></li><li class="article-link"><a class="tag_intermediate" href="#delmangd-issubset">7.5 Delm&auml;ngd - issubset()</a></li></ul></li><li class="section-link"><a href="#decorators">8. Decorators</a><ul><li class="article-link"><a class="tag_advanced" href="#vad-ar-en-decorator">8.1 Vad &auml;r en decorator?</a></li><li class="article-link"><a class="tag_advanced" href="#exempel-pa-decorator">8.2 Exempel p&aring; decorator</a></li><li class="article-link"><a class="tag_advanced" href="#varfor-decorators-ar-anvandbara">8.3 Varf&ouml;r decorators &auml;r anv&auml;ndbara</a></li><li class="article-link"><a class="tag_advanced" href="#vad-ar-args-och-kwargs">8.4 Vad &auml;r *args och **kwargs?</a></li><li class="article-link"><a class="generic" href="#args">8.5 *args</a></li><li class="article-link"><a class="tag_advanced" href="#exempel-pa-args">8.6 Exempel p&aring; *args</a></li><li class="article-link"><a class="generic" href="#kwargs">8.7 **kwargs</a></li><li class="article-link"><a class="tag_advanced" href="#exempel-pa-kwargs">8.8 Exempel p&aring; **kwargs</a></li><li class="article-link"><a class="tag_advanced" href="#kombination-av-args-och-kwargs">8.9 Kombination av *args och **kwargs</a></li></ul></li><li class="section-link"><a href="#rekursion">9. Rekursion</a><ul><li class="article-link"><a class="tag_advanced" href="#berakna-fakultet">9.1 Ber&auml;kna fakultet</a></li><li class="article-link"><a class="tag_advanced" href="#fibonnaci-serien">9.2 Fibonnaci-serien</a></li><li class="article-link"><a class="tag_advanced" href="#genomgang-av-filsystem">9.3 Genomg&aring;ng av filsystem</a></li></ul></li><li class="section-link"><a href="#kryptering">10. Kryptering</a><ul><li class="article-link"><a class="tag_advanced" href="#enkel-manuell-kryptering">10.1 Enkel manuell kryptering</a></li><li class="article-link"><a class="generic" href="#hashing">10.2 Hashing</a></li></ul></li><li class="section-link"><a href="#kombinatorik">11. Kombinatorik</a></li><li class="section-link"><a href="#pythons-standardbibliotek">12. Pythons standardbibliotek</a></li></ul></aside>
+<main>
+<h1 id="fortsattning-python">Forts&auml;ttning Python</h1>
+<section><h2 id="egna-moduler"><span class="heading-nr">1. </span>Egna moduler<a class="perma-link" data-link="https://python.ostrawebb.se/fortsattning.html#egna-moduler">#</a></h2>
+<p>Ett s&auml;tt att strukturera st&ouml;rre programmeringsprojekt &auml;r att <strong>flytta kod till egna moduler</strong>. P&aring; s&aring; s&auml;tt g&ouml;mmer man undan on&ouml;diga detaljer som inte &auml;r relevanta f&ouml;r huvudfl&ouml;det i programmet. Detta &auml;r en princip som i mjukvaruutveckling kallas f&ouml;r <strong>abstraktion</strong> (eng. <em>abstraction</em>).</p>
+<p><strong>F&ouml;r att skapa en egen modul</strong> skapar man en ny python-fil i samma mapp som ens <em>huvudfil</em>. Se till att filen har fil&auml;ndelsen <strong><code>.py</code></strong>. I den nya filen l&auml;gger man den kod man vill flytta fr&aring;n huvudprogrammet - grupperat i <strong>funktioner</strong>. Namnet p&aring; filen (om man bortser fr&aring;n fil&auml;ndelsen) blir modulens namn.</p>
+<p>Modulen importerar man sedan med <strong><code>import</code></strong> h&ouml;gst upp i ens <em>huvudprogram</em>. </p>
+<article><h4 class="tag_basic" id="exempel-pa-en-egen-modul"><span class="heading-nr">1.1 </span>Exempel p&aring; en egen modul<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#exempel-pa-en-egen-modul">#</a></h4>
+<h5 id="usermanager-py">usermanager.py</h5>
+<div class="code-container"><pre><code class="language-py">import random
 
 def create_username(fullname):
     """Generates a username based on first and last name"""
@@ -233,70 +72,39 @@ def create_password(letters = 8):
     password += str(random.randrange(10, 99))
     return password
 
-</code></pre>
-                    </div>
-                    <p>Denna modul kan sedan anv&auml;ndas p&aring; f&ouml;ljande s&auml;tt:</p>
-                    <h5 id="main-py">main.py</h5>
-                    <div class="code-container">
-                        <pre><code class="language-py">import usermanager
+</code></pre></div>
+<p>Denna modul kan sedan anv&auml;ndas p&aring; f&ouml;ljande s&auml;tt:</p>
+<h5 id="main-py">main.py</h5>
+<div class="code-container"><pre><code class="language-py">import usermanager
 
 username = usermanager.create_username('Markus Pettersson')
 password = usermanager.create_password()
 
 print('Anv&auml;ndarnamn:', username)
 print('L&ouml;senord:', password)
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_intermediate" id="ange-ett-alias-for-importerad-modul"><span class="heading-nr">1.2
-                        </span>Ange ett alias f&ouml;r importerad modul<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#ange-ett-alias-for-importerad-modul">#</a>
-                    </h4>
-                    <p>Om man tycker att ett modulnamn &auml;r f&ouml;r l&aring;ngt (eller f&ouml;r att undvika en
-                        namnkonflikt) kan man ange ett alias f&ouml;r moduler man importerar.</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">import usermanager as um
+</code></pre></div>
+</article><article><h4 class="tag_intermediate" id="ange-ett-alias-for-importerad-modul"><span class="heading-nr">1.2 </span>Ange ett alias f&ouml;r importerad modul<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#ange-ett-alias-for-importerad-modul">#</a></h4>
+<p>Om man tycker att ett modulnamn &auml;r f&ouml;r l&aring;ngt (eller f&ouml;r att undvika en namnkonflikt) kan man ange ett alias f&ouml;r moduler man importerar.</p>
+<div class="code-container"><pre><code class="language-py">import usermanager as um
 
 username = um.create_username('Markus Pettersson')
 password = um.create_password()
 
 print('Anv&auml;ndarnamn:', username)
 print('L&ouml;senord:', password)
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_intermediate" id="importera-enstaka-funktioner"><span class="heading-nr">1.3
-                        </span>Importera enstaka funktioner<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#importera-enstaka-funktioner">#</a></h4>
-                    <p>Om man inte beh&ouml;ver all funktionalitet fr&aring;n en modul kan man importera enstaka
-                        funktioner med <strong><code>from</code></strong>:</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">from usermanager import create_username
+</code></pre></div>
+</article><article><h4 class="tag_intermediate" id="importera-enstaka-funktioner"><span class="heading-nr">1.3 </span>Importera enstaka funktioner<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#importera-enstaka-funktioner">#</a></h4>
+<p>Om man inte beh&ouml;ver all funktionalitet fr&aring;n en modul kan man importera enstaka funktioner med <strong><code>from</code></strong>:</p>
+<div class="code-container"><pre><code class="language-py">from usermanager import create_username
 
 username = create_username('Markus Pettersson')
 print('Anv&auml;ndarnamn:', username)
-</code></pre>
-                    </div>
-                </article>
-            </section>
-            <section>
-                <h2 id="anvanda-en-main-funktion"><span class="heading-nr">2. </span>Anv&auml;nda en main-funktion<a
-                        class="perma-link"
-                        data-link="https://python.ostrawebb.se/fortsattning.html#anvanda-en-main-funktion">#</a></h2>
-                <p>F&ouml;r mer avancerade program (d&auml;r man till exempel anv&auml;nder flera egna funktioner)
-                    &auml;r det klokt att skapa en <strong>main-funktion</strong> som inneh&aring;ller den kod som ska
-                    k&ouml;ras n&auml;r man startar programmet. Inom mjukvaruutveckling kallar man det programmets
-                    <em>entry point</em>.</p>
-                <p>F&ouml;r att ange att det &auml;r den funktionen som ska k&ouml;ras vid start l&auml;gger man till en
-                    if-sats l&auml;ngst ner i programmet.</p>
-                <article>
-                    <h4 class="tag_intermediate" id="program-med-main-funktion"><span class="heading-nr">2.1
-                        </span>Program med main-funktion<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#program-med-main-funktion">#</a></h4>
-                    <div class="code-container">
-                        <pre><code class="language-py">def do_stuff():
+</code></pre></div>
+</article></section><section><h2 id="anvanda-en-main-funktion"><span class="heading-nr">2. </span>Anv&auml;nda en main-funktion<a class="perma-link" data-link="https://python.ostrawebb.se/fortsattning.html#anvanda-en-main-funktion">#</a></h2>
+<p>F&ouml;r mer avancerade program (d&auml;r man till exempel anv&auml;nder flera egna funktioner) &auml;r det klokt att skapa en <strong>main-funktion</strong> som inneh&aring;ller den kod som ska k&ouml;ras n&auml;r man startar programmet. Inom mjukvaruutveckling kallar man det programmets <em>entry point</em>.</p>
+<p>F&ouml;r att ange att det &auml;r den funktionen som ska k&ouml;ras vid start l&auml;gger man till en if-sats l&auml;ngst ner i programmet.</p>
+<article><h4 class="tag_intermediate" id="program-med-main-funktion"><span class="heading-nr">2.1 </span>Program med main-funktion<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#program-med-main-funktion">#</a></h4>
+<div class="code-container"><pre><code class="language-py">def do_stuff():
   """Do important stuff"""
   print('Doing stuff.')
 
@@ -317,28 +125,13 @@ def main():
 # program kommer inte main-funktionen att k&ouml;ras. 
 if __name__ == '__main__':
   main()
-</code></pre>
-                    </div>
-                    <p>Det if-satsen i slutet av programmet g&ouml;r &auml;r att kontrollera ifall koden som k&ouml;rs
-                        befinner sig i <em>huvudprogrammet</em> och inte i en importerad modul. P&aring; s&aring;
-                        s&auml;tt kan programmet anv&auml;ndas som en modul av andra program utan att koden k&ouml;rs
-                        automatiskt vid import.</p>
-                </article>
-            </section>
-            <section>
-                <h2 id="list-comprehension"><span class="heading-nr">3. </span>List comprehension<a class="perma-link"
-                        data-link="https://python.ostrawebb.se/fortsattning.html#list-comprehension">#</a></h2>
-                <p><strong>List comprehension</strong> &auml;r ett s&auml;tt att med kompakt syntax skapa en ny lista
-                    baserat p&aring; v&auml;rden fr&aring;n en annan lista. I m&aring;nga fall kan man ers&auml;tta en
-                    <strong><code>for</code></strong>-loop med en <strong>list comprehension</strong>. </p>
-                <article>
-                    <h4 class="tag_basic" id="enkel-list-comprehension"><span class="heading-nr">3.1 </span>Enkel list
-                        comprehension<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#enkel-list-comprehension">#</a></h4>
-                    <p>I exemplet g&aring;r man igenom en lista med, och metoden <strong><code>upper()</code></strong>
-                        k&ouml;rs f&ouml;r varje frukt. </p>
-                    <div class="code-container">
-                        <pre><code class="language-py"># G&aring; igenom en lista och g&ouml;r alla str&auml;ngar till VERSALER
+</code></pre></div>
+<p>Det if-satsen i slutet av programmet g&ouml;r &auml;r att kontrollera ifall koden som k&ouml;rs befinner sig i <em>huvudprogrammet</em> och inte i en importerad modul. P&aring; s&aring; s&auml;tt kan programmet anv&auml;ndas som en modul av andra program utan att koden k&ouml;rs automatiskt vid import.</p>
+</article></section><section><h2 id="list-comprehension"><span class="heading-nr">3. </span>List comprehension<a class="perma-link" data-link="https://python.ostrawebb.se/fortsattning.html#list-comprehension">#</a></h2>
+<p><strong>List comprehension</strong> &auml;r ett s&auml;tt att med kompakt syntax skapa en ny lista baserat p&aring; v&auml;rden fr&aring;n en annan lista. I m&aring;nga fall kan man ers&auml;tta en <strong><code>for</code></strong>-loop med en <strong>list comprehension</strong>. </p>
+<article><h4 class="tag_basic" id="enkel-list-comprehension"><span class="heading-nr">3.1 </span>Enkel list comprehension<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#enkel-list-comprehension">#</a></h4>
+<p>I exemplet g&aring;r man igenom en lista med, och metoden <strong><code>upper()</code></strong> k&ouml;rs f&ouml;r varje frukt. </p>
+<div class="code-container"><pre><code class="language-py"># G&aring; igenom en lista och g&ouml;r alla str&auml;ngar till VERSALER
 
 fruits = ['apple', 'banana', 'kiwi', 'pear', 'pineapple']
 upper_fruits = [f.upper() for f in fruits]
@@ -347,37 +140,19 @@ print(upper_fruits)
 
 # &rarr; ['APPLE', 'BANANA', 'KIWI', 'PEAR', 'PINEAPPLE']
 
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_basic" id="filtrera-med-list-comprehensions"><span class="heading-nr">3.2
-                        </span>Filtrera med list comprehensions<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#filtrera-med-list-comprehensions">#</a>
-                    </h4>
-                    <p>Med <strong>list comprehensions</strong> kombinerat med en <strong>if-sats</strong> kan man
-                        filtrera en lista. V&auml;rdet l&auml;ggs bara till i den nya listan ifall villkoret &auml;r
-                        uppfyllt.</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">fruits = ['apple', 'banana', 'kiwi', 'pear', 'pineapple']
+</code></pre></div>
+</article><article><h4 class="tag_basic" id="filtrera-med-list-comprehensions"><span class="heading-nr">3.2 </span>Filtrera med list comprehensions<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#filtrera-med-list-comprehensions">#</a></h4>
+<p>Med <strong>list comprehensions</strong> kombinerat med en <strong>if-sats</strong> kan man filtrera en lista. V&auml;rdet l&auml;ggs bara till i den nya listan ifall villkoret &auml;r uppfyllt.</p>
+<div class="code-container"><pre><code class="language-py">fruits = ['apple', 'banana', 'kiwi', 'pear', 'pineapple']
 long_fruit_names = [f for f in fruits if len(f) &gt; 4]
 
 print(long_fruit_names)
 
 # &rarr; ['apple', 'banana', 'pineapple']
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_advanced" id="skapa-en-ny-lista-utifran-en-funktions-returvarden"><span
-                            class="heading-nr">3.3 </span>Skapa en ny lista utifr&aring;n en funktions
-                        returv&auml;rden<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#skapa-en-ny-lista-utifran-en-funktions-returvarden">#</a>
-                    </h4>
-                    <p>H&auml;r anv&auml;nds <strong>list comprehension</strong> f&ouml;r att skapa en ny lista med de
-                        betyg som ett provresultat ger.</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">def get_grade(score):
+</code></pre></div>
+</article><article><h4 class="tag_advanced" id="skapa-en-ny-lista-utifran-en-funktions-returvarden"><span class="heading-nr">3.3 </span>Skapa en ny lista utifr&aring;n en funktions returv&auml;rden<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#skapa-en-ny-lista-utifran-en-funktions-returvarden">#</a></h4>
+<p>H&auml;r anv&auml;nds <strong>list comprehension</strong> f&ouml;r att skapa en ny lista med de betyg som ett provresultat ger.</p>
+<div class="code-container"><pre><code class="language-py">def get_grade(score):
   ''' Return a grade (A-F) depending of test score'''
   if score  &gt; 90:
     return 'A'
@@ -398,19 +173,10 @@ scores = [23, 45, 12, 56, 78, 23, 95, 54, 82, 34, 45]
 grades = [get_grade(score) for score in scores]
 
 print(grades)
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_advanced" id="sammanstallning-av-forekomst"><span class="heading-nr">3.4
-                        </span>Sammanst&auml;llning av f&ouml;rekomst<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#sammanstallning-av-forekomst">#</a></h4>
-                    <p>Med list-metoden <strong><code>count()</code></strong> kan man r&auml;kna f&ouml;rekomster av ett
-                        visst v&auml;rde i en lista. I exemplet r&auml;knar vi hur ofta ett visst betyg f&ouml;rekommer
-                        i listan grades. Med en <strong>dict comprehesion</strong> sammanst&auml;ller vi resultatet i en
-                        dictionary.</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">grades = ['D', 'C', 'A', 'D', 'F', 'D', 'A', 'E', 
+</code></pre></div>
+</article><article><h4 class="tag_advanced" id="sammanstallning-av-forekomst"><span class="heading-nr">3.4 </span>Sammanst&auml;llning av f&ouml;rekomst<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#sammanstallning-av-forekomst">#</a></h4>
+<p>Med list-metoden <strong><code>count()</code></strong> kan man r&auml;kna f&ouml;rekomster av ett visst v&auml;rde i en lista. I exemplet r&auml;knar vi hur ofta ett visst betyg f&ouml;rekommer i listan grades. Med en <strong>dict comprehesion</strong> sammanst&auml;ller vi resultatet i en dictionary.</p>
+<div class="code-container"><pre><code class="language-py">grades = ['D', 'C', 'A', 'D', 'F', 'D', 'A', 'E', 
           'B', 'D', 'E', 'E', 'F', 'E', 'B', 'F']
 
 grade_options = ('A', 'B', 'C', 'D', 'E', 'F')
@@ -419,68 +185,51 @@ summary = {grade: grades.count(g) for g in grade_options}
 print(summary)
 
 # {'A': 2, 'B': 2, 'C': 1, 'D': 4, 'E': 4, 'F': 3}
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_intermediate" id="ta-ut-en-kolumn-fran-tabellstruktur-csv"><span
-                            class="heading-nr">3.5 </span>Ta ut en kolumn fr&aring;n tabellstruktur (CSV)<a
-                            class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#ta-ut-en-kolumn-fran-tabellstruktur-csv">#</a>
-                    </h4>
-                    <p>Om man har en datastruktur med listor i listor (som t.ex. en CSV-fil) och vill bara ha ut
-                        v&auml;rdena fr&aring;n en kolumn kan man g&ouml;ra det enkelt med list comprehensions.</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">column_1 = [row[0] for row in data]
-</code></pre>
-                    </div>
-                    <p><strong>Scenario:</strong> vi har enk&auml;tsvar i ett kalkylark (som vi l&auml;tt kan exportera
-                        som CSV-fil). I enk&auml;ten har 50 personer angett sina favoriter vad g&auml;ller glass, godis
-                        och matr&auml;tter. Vi vill ta reda p&aring; hur m&aring;nga procent som f&ouml;redrar de olika
-                        glassarna.</p>
-                    <p>S&aring; h&auml;r ser kalkylarket ut:</p>
-                    <div class="table-container">
-                        <table>
-                            <thead>
-                                <tr>
-                                    <th>icecream</th>
-                                    <th>candy</th>
-                                    <th>foods</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <td>cornetto</td>
-                                    <td>marabou mj&ouml;lkchoklad</td>
-                                    <td>tacos</td>
-                                </tr>
-                                <tr>
-                                    <td>daimstrut</td>
-                                    <td>kexchoklad</td>
-                                    <td>husmanskost</td>
-                                </tr>
-                                <tr>
-                                    <td>cornetto</td>
-                                    <td>marabou mj&ouml;lkchoklad</td>
-                                    <td>pizza</td>
-                                </tr>
-                                <tr>
-                                    <td>daimstrut</td>
-                                    <td>kexchoklad</td>
-                                    <td>sushi</td>
-                                </tr>
-                                <tr>
-                                    <td>&hellip;</td>
-                                    <td>&hellip;</td>
-                                    <td>&hellip;</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <p>S&aring; h&auml;r ser koden ut som tar ut f&ouml;rsta kolumnen fr&aring;n CSV-datan och
-                        ber&auml;knar procenten:</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">import csv
+</code></pre></div>
+</article><article><h4 class="tag_intermediate" id="ta-ut-en-kolumn-fran-tabellstruktur-csv"><span class="heading-nr">3.5 </span>Ta ut en kolumn fr&aring;n tabellstruktur (CSV)<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#ta-ut-en-kolumn-fran-tabellstruktur-csv">#</a></h4>
+<p>Om man har en datastruktur med listor i listor (som t.ex. en CSV-fil) och vill bara ha ut v&auml;rdena fr&aring;n en kolumn kan man g&ouml;ra det enkelt med list comprehensions.</p>
+<div class="code-container"><pre><code class="language-py">column_1 = [row[0] for row in data]
+</code></pre></div>
+<p><strong>Scenario:</strong> vi har enk&auml;tsvar i ett kalkylark (som vi l&auml;tt kan exportera som CSV-fil). I enk&auml;ten har 50 personer angett sina favoriter vad g&auml;ller glass, godis och matr&auml;tter. Vi vill ta reda p&aring; hur m&aring;nga procent som f&ouml;redrar de olika glassarna.</p>
+<p>S&aring; h&auml;r ser kalkylarket ut:</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th>icecream</th>
+<th>candy</th>
+<th>foods</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cornetto</td>
+<td>marabou mj&ouml;lkchoklad</td>
+<td>tacos</td>
+</tr>
+<tr>
+<td>daimstrut</td>
+<td>kexchoklad</td>
+<td>husmanskost</td>
+</tr>
+<tr>
+<td>cornetto</td>
+<td>marabou mj&ouml;lkchoklad</td>
+<td>pizza</td>
+</tr>
+<tr>
+<td>daimstrut</td>
+<td>kexchoklad</td>
+<td>sushi</td>
+</tr>
+<tr>
+<td>&hellip;</td>
+<td>&hellip;</td>
+<td>&hellip;</td>
+</tr>
+</tbody>
+</table></div>
+<p>S&aring; h&auml;r ser koden ut som tar ut f&ouml;rsta kolumnen fr&aring;n CSV-datan och ber&auml;knar procenten:</p>
+<div class="code-container"><pre><code class="language-py">import csv
 
 # &Ouml;ppna filen
 with open('favourites.csv', newline='') as csvfile:
@@ -503,43 +252,20 @@ result = [(i, icecream.count(i) / len(icecream)) for i in unique_values]
 # Skriv ut resultatet p&aring; ett prydligt s&auml;tt med f-strings
 for r in result:
     print(f'{r[0].capitalize():&lt;13} {r[1]:&gt;5.1%}')
-</code></pre>
-                    </div>
+</code></pre></div>
 
-                </article>
-            </section>
-            <section>
-                <h2 id="oop-objektorienterad-programmering"><span class="heading-nr">4. </span>OOP - Objektorienterad
-                    programmering<a class="perma-link"
-                        data-link="https://python.ostrawebb.se/fortsattning.html#oop-objektorienterad-programmering">#</a>
-                </h2>
-                <p>Objektorienterad programmering (OOP) i Python &auml;r ett s&auml;tt att <strong>strukturera kod med
-                        hj&auml;lp av objekt.</strong> Objekt representerar ofta verkliga saker eller koncept (till
-                    exempel en produkt, anv&auml;ndare, NPC i ett spel etc). Man kan likna ett objekt med en samling
-                    variabler och funktioner (kodstycken) som h&ouml;r ihop.</p>
-                <p>OOP g&ouml;r koden mer modul&auml;r, &aring;teranv&auml;ndbar och l&auml;ttare att underh&aring;lla.
-                    Att arbeta med klasser och objekt &auml;r ocks&aring; en metod f&ouml;r <strong>abstraktion</strong>
-                    - att g&ouml;mma undan detaljer f&ouml;r att g&ouml;ra helheten mindre komplex.</p>
-                <h3 class="tag_intermediate" id="begrepp-inom-oop"><span class="heading-nr">4.1 </span>Begrepp inom
-                    OOP<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#begrepp-inom-oop">#</a>
-                </h3>
-                <ul>
-                    <li><strong>Klass (class):</strong> En mall eller "ritning" f&ouml;r objekt. I klassen definieras
-                        attribut (variabler) och metoder (funktioner). </li>
-                    <li><strong>Objekt (instanser):</strong> En konkret till&auml;mpning av en klass, t.ex. en specifik
-                        produkt, en specifik NPC etc. </li>
-                    <li><strong>Attribut:</strong> Variabler kopplade till en klass/objekt som beskriver objektets
-                        egenskaper (t.ex. f&auml;rg, namn, &aring;lder). Varje objekt har sina egna v&auml;rden p&aring;
-                        attributen. </li>
-                    <li><strong>Metoder:</strong> Funktioner som definieras i en klass och kan anv&auml;ndas p&aring;
-                        objekt. Vad objektet kan "g&ouml;ra".</li>
-                </ul>
-                <article>
-                    <h4 class="tag_intermediate" id="exempel-pa-en-klass"><span class="heading-nr">4.2 </span>Exempel
-                        p&aring; en klass<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#exempel-pa-en-klass">#</a></h4>
-                    <div class="code-container">
-                        <pre><code class="language-py"># Definiera en klass
+</article></section><section><h2 id="oop-objektorienterad-programmering"><span class="heading-nr">4. </span>OOP - Objektorienterad programmering<a class="perma-link" data-link="https://python.ostrawebb.se/fortsattning.html#oop-objektorienterad-programmering">#</a></h2>
+<p>Objektorienterad programmering (OOP) i Python &auml;r ett s&auml;tt att <strong>strukturera kod med hj&auml;lp av objekt.</strong> Objekt representerar ofta verkliga saker eller koncept (till exempel en produkt, anv&auml;ndare, NPC i ett spel etc). Man kan likna ett objekt med en samling variabler och funktioner (kodstycken) som h&ouml;r ihop.</p>
+<p>OOP g&ouml;r koden mer modul&auml;r, &aring;teranv&auml;ndbar och l&auml;ttare att underh&aring;lla. Att arbeta med klasser och objekt &auml;r ocks&aring; en metod f&ouml;r <strong>abstraktion</strong> - att g&ouml;mma undan detaljer f&ouml;r att g&ouml;ra helheten mindre komplex.</p>
+<h3 class="tag_intermediate" id="begrepp-inom-oop"><span class="heading-nr">4.1 </span>Begrepp inom OOP<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#begrepp-inom-oop">#</a></h3>
+<ul>
+<li><strong>Klass (class):</strong> En mall eller "ritning" f&ouml;r objekt. I klassen definieras attribut (variabler) och metoder (funktioner).  </li>
+<li><strong>Objekt (instanser):</strong> En konkret till&auml;mpning av en klass, t.ex. en specifik produkt, en specifik NPC etc.  </li>
+<li><strong>Attribut:</strong> Variabler kopplade till en klass/objekt som beskriver objektets egenskaper (t.ex. f&auml;rg, namn, &aring;lder). Varje objekt har sina egna v&auml;rden p&aring; attributen.  </li>
+<li><strong>Metoder:</strong> Funktioner som definieras i en klass och kan anv&auml;ndas p&aring; objekt. Vad objektet kan "g&ouml;ra".</li>
+</ul>
+<article><h4 class="tag_intermediate" id="exempel-pa-en-klass"><span class="heading-nr">4.2 </span>Exempel p&aring; en klass<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#exempel-pa-en-klass">#</a></h4>
+<div class="code-container"><pre><code class="language-py"># Definiera en klass
 
 class Dog:
     """A class representing a dog."""
@@ -563,19 +289,10 @@ print(fido.age)
 
 # &rarr;'Elmo s&auml;ger: Voff!'
 # &rarr; 5
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_advanced" id="arv-inom-oop"><span class="heading-nr">4.3 </span>Arv inom OOP<a
-                            class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#arv-inom-oop">#</a>
-                    </h4>
-                    <p>Arv &auml;r n&auml;r en <strong>klass (child class)</strong> tar &ouml;ver <strong>egenskaper och
-                            metoder</strong> fr&aring;n en annan klass (<strong>parent class</strong>). Det anv&auml;nds
-                        f&ouml;r att <strong>&aring;teranv&auml;nda kod</strong> och skapa <strong>specialiserade
-                            versioner</strong> av en klass.</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">class Animal:
+</code></pre></div>
+</article><article><h4 class="tag_advanced" id="arv-inom-oop"><span class="heading-nr">4.3 </span>Arv inom OOP<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#arv-inom-oop">#</a></h4>
+<p>Arv &auml;r n&auml;r en <strong>klass (child class)</strong> tar &ouml;ver <strong>egenskaper och metoder</strong> fr&aring;n en annan klass (<strong>parent class</strong>). Det anv&auml;nds f&ouml;r att <strong>&aring;teranv&auml;nda kod</strong> och skapa <strong>specialiserade versioner</strong> av en klass.</p>
+<div class="code-container"><pre><code class="language-py">class Animal:
     """A class representiong an animal"""
     def __init__(self, name):
         self.name = name
@@ -607,16 +324,9 @@ sigge = Cat('Sigge')
 
 elmo.eat('korv')
 sigge.eat('fisk')
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_advanced" id="exempel-pa-en-klass-for-ett-blogginlagg"><span class="heading-nr">4.4
-                        </span>Exempel p&aring; en klass f&ouml;r ett blogginl&auml;gg<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#exempel-pa-en-klass-for-ett-blogginlagg">#</a>
-                    </h4>
-                    <div class="code-container">
-                        <pre><code class="language-py">class Post:
+</code></pre></div>
+</article><article><h4 class="tag_advanced" id="exempel-pa-en-klass-for-ett-blogginlagg"><span class="heading-nr">4.4 </span>Exempel p&aring; en klass f&ouml;r ett blogginl&auml;gg<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#exempel-pa-en-klass-for-ett-blogginlagg">#</a></h4>
+<div class="code-container"><pre><code class="language-py">class Post:
     """ A class representing a blog post"""
     def __init__(self, title, content, author):
         self.title = title
@@ -647,59 +357,29 @@ post = Post(
       )
 
 post.display()
-</code></pre>
-                    </div>
-                </article>
-                <h3 id="nar-passar-objektorienterad-programmering"><span class="heading-nr">4.5 </span>N&auml;r passar
-                    objektorienterad programmering ?<a class="perma-link"
-                        href="https://python.ostrawebb.se/fortsattning.html#nar-passar-objektorienterad-programmering">#</a>
-                </h3>
-                <p>I Python &auml;r det inte lika vanligt att jobba objektorienterat j&auml;mf&ouml;rt med andra
-                    popul&auml;ra programmeringsspr&aring;k (till exempel Java och C#). I Python &auml;r det
-                    ist&auml;llet vanligare att anv&auml;nda funktioner och moduler f&ouml;r att dela upp sina program.
-                </p>
-                <p>N&aring;gra situationer d&auml;r det passar bra med objektorienterad programmering &auml;r:</p>
-                <ul>
-                    <li>Simuleringar och spel. H&auml;r beh&ouml;ver man ofta m&aring;nga liknande objekt som alla har
-                        olika egenskaper. (Karakt&auml;rer, partiklar, f&ouml;rem&aring;l etc.) </li>
-                    <li>Webbutveckling. H&auml;r kan man anv&auml;nda klasser f&ouml;r att representera sidor,
-                        inl&auml;gg, kommentarer, anv&auml;ndare, produkter i en webbshop etc. </li>
-                    <li>I ekonomirelaterade applikationer. H&auml;r kan klasser representera konton, transaktioner,
-                        best&auml;llningar.</li>
-                </ul>
-                <p>I m&aring;nga applikationer anv&auml;nder man databaser i kombination med klasser och objekt.
-                    Objektens olika v&auml;rden lagras i en databas och n&auml;r ett objekt skapas laddas dess
-                    egenskaper fr&aring;n databasen.</p>
-            </section>
-            <section>
-                <h2 id="dataformatet-json"><span class="heading-nr">5. </span>Dataformatet JSON<a class="perma-link"
-                        data-link="https://python.ostrawebb.se/fortsattning.html#dataformatet-json">#</a></h2>
-                <p><strong>JSON</strong> st&aring;r f&ouml;r JavaScript Object Notation och &auml;r (precis som CSV) ett
-                    <strong>textbaserat format f&ouml;r att lagra och utbyta data</strong>. Det anv&auml;nds ofta
-                    n&auml;r data skickas mellan en server och en webbl&auml;sare eller sparas i filer. (Till exempel
-                    konfigurationsfiler f&ouml;r program eller sparfiler f&ouml;r spel.)</p>
-                <p>Den stora skillnaden mellan JSON fr&aring;n CSV &auml;r att du i JSON kan ha <strong>n&auml;stlade
-                        datastrukturer.</strong> Du kan allts&aring; kombinera dictionaries med listor p&aring; flera
-                    olika s&auml;tt. I exemplet nedan har vi en lista som inneh&aring;ller dictionaries &ouml;ver
-                    filmer, varje film har i sin tur en lista f&ouml;r sk&aring;despelarna.</p>
-                <h3 class="tag_basic" id="json-formatet"><span class="heading-nr">5.1 </span>JSON-formatet<a
-                        class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#json-formatet">#</a></h3>
-                <ul>
-                    <li>Data representeras som <strong>nyckel&ndash;v&auml;rde-par</strong> precis som dictionaries i
-                        Python. </li>
-                    <li><strong>Objekt</strong> skrivs inom <strong><code>{ }</code></strong> (motsvarar dictionaries i
-                        Python). </li>
-                    <li><strong>Listor (arrayer)</strong> skrivs inom <strong><code>[ ]</code></strong>. </li>
-                    <li><strong>Str&auml;ngar</strong> omges av dubbla citattecken <code>" "</code>. </li>
-                    <li><strong>V&auml;rden</strong> kan vara: str&auml;ngar, tal, booleska
-                        (<strong><code>true</code></strong>/<strong><code>false</code></strong>),
-                        <strong><code>null</code></strong>, objekt eller listor.</li>
-                </ul>
-                <h3 id="exempel-pa-json-data"><span class="heading-nr">5.2 </span>Exempel p&aring; JSON-data<a
-                        class="perma-link"
-                        href="https://python.ostrawebb.se/fortsattning.html#exempel-pa-json-data">#</a></h3>
-                <div class="code-container">
-                    <pre><code class="language-json">[ 
+</code></pre></div>
+</article><h3 id="nar-passar-objektorienterad-programmering"><span class="heading-nr">4.5 </span>N&auml;r passar objektorienterad programmering ?<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#nar-passar-objektorienterad-programmering">#</a></h3>
+<p>I Python &auml;r det inte lika vanligt att jobba objektorienterat j&auml;mf&ouml;rt med andra popul&auml;ra programmeringsspr&aring;k (till exempel Java och C#). I Python &auml;r det ist&auml;llet vanligare att anv&auml;nda funktioner och moduler f&ouml;r att dela upp sina program.</p>
+<p>N&aring;gra situationer d&auml;r det passar bra med objektorienterad programmering &auml;r:</p>
+<ul>
+<li>Simuleringar och spel. H&auml;r beh&ouml;ver man ofta m&aring;nga liknande objekt som alla har olika egenskaper. (Karakt&auml;rer, partiklar, f&ouml;rem&aring;l etc.)  </li>
+<li>Webbutveckling. H&auml;r kan man anv&auml;nda klasser f&ouml;r att representera sidor, inl&auml;gg, kommentarer, anv&auml;ndare, produkter i en webbshop etc.  </li>
+<li>I ekonomirelaterade applikationer. H&auml;r kan klasser representera konton, transaktioner, best&auml;llningar.</li>
+</ul>
+<p>I m&aring;nga applikationer anv&auml;nder man databaser i kombination med klasser och objekt. Objektens olika v&auml;rden lagras i en databas och n&auml;r ett objekt skapas laddas dess egenskaper fr&aring;n databasen.</p>
+</section><section><h2 id="dataformatet-json"><span class="heading-nr">5. </span>Dataformatet JSON<a class="perma-link" data-link="https://python.ostrawebb.se/fortsattning.html#dataformatet-json">#</a></h2>
+<p><strong>JSON</strong> st&aring;r f&ouml;r JavaScript Object Notation och &auml;r (precis som CSV) ett <strong>textbaserat format f&ouml;r att lagra och utbyta data</strong>. Det anv&auml;nds ofta n&auml;r data skickas mellan en server och en webbl&auml;sare eller sparas i filer. (Till exempel konfigurationsfiler f&ouml;r program eller sparfiler f&ouml;r spel.)</p>
+<p>Den stora skillnaden mellan JSON fr&aring;n CSV &auml;r att du i JSON kan ha <strong>n&auml;stlade datastrukturer.</strong> Du kan allts&aring; kombinera dictionaries med listor p&aring; flera olika s&auml;tt. I exemplet nedan har vi en lista som inneh&aring;ller dictionaries &ouml;ver filmer, varje film har i sin tur en lista f&ouml;r sk&aring;despelarna.</p>
+<h3 class="tag_basic" id="json-formatet"><span class="heading-nr">5.1 </span>JSON-formatet<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#json-formatet">#</a></h3>
+<ul>
+<li>Data representeras som <strong>nyckel&ndash;v&auml;rde-par</strong> precis som dictionaries i Python.  </li>
+<li><strong>Objekt</strong> skrivs inom <strong><code>{ }</code></strong> (motsvarar dictionaries i Python).  </li>
+<li><strong>Listor (arrayer)</strong> skrivs inom <strong><code>[ ]</code></strong>.  </li>
+<li><strong>Str&auml;ngar</strong> omges av dubbla citattecken <code>" "</code>.  </li>
+<li><strong>V&auml;rden</strong> kan vara: str&auml;ngar, tal, booleska (<strong><code>true</code></strong>/<strong><code>false</code></strong>), <strong><code>null</code></strong>, objekt eller listor.</li>
+</ul>
+<h3 id="exempel-pa-json-data"><span class="heading-nr">5.2 </span>Exempel p&aring; JSON-data<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#exempel-pa-json-data">#</a></h3>
+<div class="code-container"><pre><code class="language-json">[ 
  {
     "title": "Blade Runner 2049",
     "year": 2017,
@@ -716,17 +396,10 @@ post.display()
   },
     ...
 ]
-</code></pre>
-                </div>
-                <article>
-                    <h4 class="tag_intermediate" id="lasa-och-tolka-json-data-fran-fil"><span class="heading-nr">5.3
-                        </span>L&auml;sa och tolka JSON-data fr&aring;n fil<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#lasa-och-tolka-json-data-fran-fil">#</a>
-                    </h4>
-                    <p>H&auml;r finns den JSON-fil som anv&auml;nds i exemplet: 🔗<a
-                            href="https://python.ostrawebb.se/data/movies.json">movies.json</a></p>
-                    <div class="code-container">
-                        <pre><code class="language-py">import json
+</code></pre></div>
+<article><h4 class="tag_intermediate" id="lasa-och-tolka-json-data-fran-fil"><span class="heading-nr">5.3 </span>L&auml;sa och tolka JSON-data fr&aring;n fil<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#lasa-och-tolka-json-data-fran-fil">#</a></h4>
+<p>H&auml;r finns den JSON-fil som anv&auml;nds i exemplet: 🔗<a href="https://python.ostrawebb.se/data/movies.json">movies.json</a></p>
+<div class="code-container"><pre><code class="language-py">import json
 
 # &Ouml;ppna och l&auml;s filen
 with open("movies.json", "r", encoding="utf-8") as file:
@@ -739,15 +412,9 @@ for movie in movies:
     main_cast = ', '.join(movie['main_cast'])
     print('Actors: ' + main_cast)
     print('------------------------------------')
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_intermediate" id="spara-python-data-som-json"><span class="heading-nr">5.4
-                        </span>Spara Python-data som JSON<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#spara-python-data-som-json">#</a></h4>
-                    <div class="code-container">
-                        <pre><code class="language-py">import json
+</code></pre></div>
+</article><article><h4 class="tag_intermediate" id="spara-python-data-som-json"><span class="heading-nr">5.4 </span>Spara Python-data som JSON<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#spara-python-data-som-json">#</a></h4>
+<div class="code-container"><pre><code class="language-py">import json
 
 game_data = {
   'xp': 12,
@@ -762,29 +429,13 @@ with open("save_file.json", "w", encoding="utf-8") as file:
     json.dump(game_data, file, indent=4) 
 
 print("Data sparad till save_file.json")
-</code></pre>
-                    </div>
+</code></pre></div>
 
-                </article>
-            </section>
-            <section>
-                <h2 id="avancerad-hantering-av-listor"><span class="heading-nr">6. </span>Avancerad hantering av
-                    listor<a class="perma-link"
-                        data-link="https://python.ostrawebb.se/fortsattning.html#avancerad-hantering-av-listor">#</a>
-                </h2>
-                <article>
-                    <h4 class="tag_intermediate" id="funktionen-zip-para-ihop-varden-fran-listor"><span
-                            class="heading-nr">6.1 </span>Funktionen zip - para ihop v&auml;rden fr&aring;n listor<a
-                            class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#funktionen-zip-para-ihop-varden-fran-listor">#</a>
-                    </h4>
-                    <p>Funktionen <strong><code>zip</code></strong> kan anv&auml;ndas f&ouml;r att para ihop v&auml;rden
-                        fr&aring;n tv&aring; listor eller tuplar. (Funktionen funkar &auml;ven med samlingen set, men
-                        d&aring; garanteras inte ordningen av v&auml;rdena.)</p>
-                    <p>Det funktionen returnerar &auml;r ett zip-objekt som sedan kan konverteras till den samling man
-                        &ouml;nskar (dict, tupel eller lista).</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">days = ['M&aring;ndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag']
+</article></section><section><h2 id="avancerad-hantering-av-listor"><span class="heading-nr">6. </span>Avancerad hantering av listor<a class="perma-link" data-link="https://python.ostrawebb.se/fortsattning.html#avancerad-hantering-av-listor">#</a></h2>
+<article><h4 class="tag_intermediate" id="funktionen-zip-para-ihop-varden-fran-listor"><span class="heading-nr">6.1 </span>Funktionen zip - para ihop v&auml;rden fr&aring;n listor<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#funktionen-zip-para-ihop-varden-fran-listor">#</a></h4>
+<p>Funktionen <strong><code>zip</code></strong> kan anv&auml;ndas f&ouml;r att para ihop v&auml;rden fr&aring;n tv&aring; listor eller tuplar. (Funktionen funkar &auml;ven med samlingen set, men d&aring; garanteras inte ordningen av v&auml;rdena.)</p>
+<p>Det funktionen returnerar &auml;r ett zip-objekt som sedan kan konverteras till den samling man &ouml;nskar (dict, tupel eller lista).</p>
+<div class="code-container"><pre><code class="language-py">days = ['M&aring;ndag', 'Tisdag', 'Onsdag', 'Torsdag', 'Fredag']
 food = ['kebab', 'pizza', 'sushi', 'meatballs', 'tacos']
 
 menu = zip(days, food)
@@ -794,39 +445,20 @@ print(menu)
 
 # &rarr; {'M&aring;ndag': 'kebab', 'Tisdag': 'pizza', 'Onsdag': 'sushi', 
 #     'Torsdag': 'meatballs', 'Fredag': 'tacos'}
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_intermediate" id="uppackning-unpacking-av-samlingar"><span class="heading-nr">6.2
-                        </span>Uppackning (unpacking) av samlingar<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#uppackning-unpacking-av-samlingar">#</a>
-                    </h4>
-                    <p>Ibland vill man ta en lista (eller tupel) och tilldela dess v&auml;rden till enskilda variabler.
-                        Det g&aring;r att g&ouml;ra genom att ange flera variabelnamn separerade med kommatecken och
-                        tilldela dem listan:</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">user = ['Markus Pettersson', 'marpet', 'supersecret']
+</code></pre></div>
+</article><article><h4 class="tag_intermediate" id="uppackning-unpacking-av-samlingar"><span class="heading-nr">6.2 </span>Uppackning (unpacking) av samlingar<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#uppackning-unpacking-av-samlingar">#</a></h4>
+<p>Ibland vill man ta en lista (eller tupel) och tilldela dess v&auml;rden till enskilda variabler. Det g&aring;r att g&ouml;ra genom att ange flera variabelnamn separerade med kommatecken och tilldela dem listan:</p>
+<div class="code-container"><pre><code class="language-py">user = ['Markus Pettersson', 'marpet', 'supersecret']
 
 name, username, password = user
 
 print('Namn:', name)
 print('Anv&auml;ndarnamn:', username)
 print('L&ouml;senord:', password)
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_intermediate" id="enumerate"><span class="heading-nr">6.3 </span>Enumerate<a
-                            class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#enumerate">#</a></h4>
-                    <p>Ibland vill man iterera/g&aring; igenom en lista och samtidigt ha tillg&aring;ng till en
-                        r&auml;knare. (T.ex. om man vill rangordna n&aring;got, som favoritfilmer eller liknande.) Ett
-                        smidigt s&auml;tt &auml;r att anv&auml;nda funktionen <strong><code>enumerate</code></strong>.
-                        D&aring; kan man iterera en lista och samtidigt f&aring; tillg&aring;ng till en r&auml;knare.
-                        Med argumentet <strong><code>start</code></strong> kan man ange r&auml;knarens startv&auml;rde.
-                    </p>
-                    <div class="code-container">
-                        <pre><code class="language-py">fav_movies = ['Toy Story 2', 'Toy Story', 
+</code></pre></div>
+</article><article><h4 class="tag_intermediate" id="enumerate"><span class="heading-nr">6.3 </span>Enumerate<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#enumerate">#</a></h4>
+<p>Ibland vill man iterera/g&aring; igenom en lista och samtidigt ha tillg&aring;ng till en r&auml;knare. (T.ex. om man vill rangordna n&aring;got, som favoritfilmer eller liknande.) Ett smidigt s&auml;tt &auml;r att anv&auml;nda funktionen <strong><code>enumerate</code></strong>. D&aring; kan man iterera en lista och samtidigt f&aring; tillg&aring;ng till en r&auml;knare. Med argumentet <strong><code>start</code></strong> kan man ange r&auml;knarens startv&auml;rde. </p>
+<div class="code-container"><pre><code class="language-py">fav_movies = ['Toy Story 2', 'Toy Story', 
               'Finding Nemo', 'Inside Out']
 
 for number, movie in enumerate(fav_movies, start=1):
@@ -834,19 +466,10 @@ for number, movie in enumerate(fav_movies, start=1):
 #    2 Toy Story
 #    3 Finding Nemo
 #    4 Inside Out
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_advanced" id="sortera-en-lista-av-dictionaries"><span class="heading-nr">6.4
-                        </span>Sortera en lista av dictionaries<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#sortera-en-lista-av-dictionaries">#</a>
-                    </h4>
-                    <p>H&auml;r anv&auml;nds funktionen <strong>sorted()</strong> i kombination med en
-                        <strong>lambda</strong>-funktion (en namnl&ouml;s en-rads-funktion) f&ouml;r att sortera en
-                        lista med dictionaries p&aring; ett av dict:ens v&auml;rden (score).</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">test_result = [
+</code></pre></div>
+</article><article><h4 class="tag_advanced" id="sortera-en-lista-av-dictionaries"><span class="heading-nr">6.4 </span>Sortera en lista av dictionaries<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#sortera-en-lista-av-dictionaries">#</a></h4>
+<p>H&auml;r anv&auml;nds funktionen <strong>sorted()</strong> i kombination med en <strong>lambda</strong>-funktion (en namnl&ouml;s en-rads-funktion) f&ouml;r att sortera en lista med dictionaries p&aring; ett av dict:ens v&auml;rden (score).</p>
+<div class="code-container"><pre><code class="language-py">test_result = [
   {
     'student': 'Orvar Orvarsson',
     'class': 'TETE28',
@@ -865,18 +488,10 @@ for number, movie in enumerate(fav_movies, start=1):
 ]
 
 ranking = sorted(test_result, key=lambda tr: tr['score'], reverse=True)
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_advanced" id="ga-igenom-tva-listor-samtidigt"><span class="heading-nr">6.5
-                        </span>G&aring; igenom tv&aring; listor samtidigt<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#ga-igenom-tva-listor-samtidigt">#</a>
-                    </h4>
-                    <p>Med funktionen <strong><code>zip</code></strong> och <strong>unpacking</strong> kan vi g&aring;
-                        igenom/iterera tv&aring; listor samtidigt.</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">scores = [23, 45, 12, 56, 78, 23, 95, 54, 82, 34, 45]
+</code></pre></div>
+</article><article><h4 class="tag_advanced" id="ga-igenom-tva-listor-samtidigt"><span class="heading-nr">6.5 </span>G&aring; igenom tv&aring; listor samtidigt<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#ga-igenom-tva-listor-samtidigt">#</a></h4>
+<p>Med funktionen <strong><code>zip</code></strong> och <strong>unpacking</strong> kan vi g&aring; igenom/iterera tv&aring; listor samtidigt.</p>
+<div class="code-container"><pre><code class="language-py">scores = [23, 45, 12, 56, 78, 23, 95, 54, 82, 34, 45]
 grades = ['F', 'F', 'F', 'E', 'C', 'F', 
           'A', 'E', 'B', 'F', 'F']
 
@@ -887,23 +502,11 @@ for score, grade in zip(scores, grades):
 # Score: 45 &rarr; Grade: F
 # Score: 12 &rarr; Grade: F
 # ...
-</code></pre>
-                    </div>
+</code></pre></div>
 
-                </article>
-            </section>
-            <section>
-                <h2 id="set-mangdteori-och-mangoperationer"><span class="heading-nr">7. </span>Set - m&auml;ngdteori och
-                    m&auml;ngoperationer<a class="perma-link"
-                        data-link="https://python.ostrawebb.se/fortsattning.html#set-mangdteori-och-mangoperationer">#</a>
-                </h2>
-                <article>
-                    <h4 class="tag_basic" id="lagg-till-och-ta-bort-fran-ett-set"><span class="heading-nr">7.1
-                        </span>L&auml;gg till och ta bort fr&aring;n ett set<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#lagg-till-och-ta-bort-fran-ett-set">#</a>
-                    </h4>
-                    <div class="code-container">
-                        <pre><code class="language-py">a_students = {'Gert', 'Berit', 'Eivor', 'Fanny'}
+</article></section><section><h2 id="set-mangdteori-och-mangoperationer"><span class="heading-nr">7. </span>Set - m&auml;ngdteori och m&auml;ngoperationer<a class="perma-link" data-link="https://python.ostrawebb.se/fortsattning.html#set-mangdteori-och-mangoperationer">#</a></h2>
+<article><h4 class="tag_basic" id="lagg-till-och-ta-bort-fran-ett-set"><span class="heading-nr">7.1 </span>L&auml;gg till och ta bort fr&aring;n ett set<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#lagg-till-och-ta-bort-fran-ett-set">#</a></h4>
+<div class="code-container"><pre><code class="language-py">a_students = {'Gert', 'Berit', 'Eivor', 'Fanny'}
 
 # L&auml;gg till ett v&auml;rde till set
 a_students.add('Kjell')
@@ -912,19 +515,10 @@ a_students.add('Kjell')
 a_students.discard('Gert')
 
 print(a_students)
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_intermediate" id="set-skillnader-difference"><span class="heading-nr">7.2 </span>Set
-                        - skillnader: difference()<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#set-skillnader-difference">#</a></h4>
-                    <p>Med metoden <strong><code>difference</code></strong> f&aring;r man ett nytt <strong>set</strong>
-                        med <em>differensen</em> mellan m&auml;ngderna<em>.</em> I exemplet nedan f&aring;r vi
-                        allts&aring; namnen p&aring; de elever som <strong>inte</strong> finns i b&aring;da listorna.
-                    </p>
-                    <div class="code-container">
-                        <pre><code class="language-py"># Alla elever i klassen
+</code></pre></div>
+</article><article><h4 class="tag_intermediate" id="set-skillnader-difference"><span class="heading-nr">7.2 </span>Set - skillnader: difference()<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#set-skillnader-difference">#</a></h4>
+<p>Med metoden <strong><code>difference</code></strong> f&aring;r man ett nytt <strong>set</strong> med <em>differensen</em> mellan m&auml;ngderna<em>.</em> I exemplet nedan f&aring;r vi allts&aring; namnen p&aring; de elever som <strong>inte</strong> finns i b&aring;da listorna.</p>
+<div class="code-container"><pre><code class="language-py"># Alla elever i klassen
 students = {'Anna', 'Bertil', 'Ceasar', 
             'David', 'Erik', 'Frida'}
 
@@ -937,19 +531,10 @@ absent = students.difference(attending)
 print(absent)
 
 # &rarr; {'Bertil', 'Ceasar'}
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_intermediate" id="set-overlappande-intersection"><span class="heading-nr">7.3
-                        </span>Set - &ouml;verlappande: intersection()<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#set-overlappande-intersection">#</a>
-                    </h4>
-                    <p>Med metoden <strong><code>intersection</code></strong> f&aring;r man ett nytt
-                        <strong>set</strong> med de element som <strong>finns</strong> i b&aring;da seten. Inom
-                        matematiken kallas detta f&ouml;r ett <em>snitt.</em> </p>
-                    <div class="code-container">
-                        <pre><code class="language-py"># Alla elever i klassen
+</code></pre></div>
+</article><article><h4 class="tag_intermediate" id="set-overlappande-intersection"><span class="heading-nr">7.3 </span>Set - &ouml;verlappande: intersection()<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#set-overlappande-intersection">#</a></h4>
+<p>Med metoden <strong><code>intersection</code></strong> f&aring;r man ett nytt <strong>set</strong> med de element som <strong>finns</strong> i b&aring;da seten. Inom matematiken kallas detta f&ouml;r ett <em>snitt.</em> </p>
+<div class="code-container"><pre><code class="language-py"># Alla elever i klassen
 students = {'Anna', 'Bertil', 'Ceasar', 
             'David', 'Erik', 'Frida'}
 
@@ -963,18 +548,10 @@ friends_in_class = friends.intersection(students)
 print(friends_in_class)
 
 # &rarr; {'Frida', 'David', 'Erik'}
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_advanced" id="forena-tva-set-union"><span class="heading-nr">7.4 </span>F&ouml;rena
-                        tv&aring; set: union()<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#forena-tva-set-union">#</a></h4>
-                    <p>Med metoden <strong><code>union()</code></strong> kan man f&ouml;rena tv&aring; set. I exemplet
-                        nedan anv&auml;nder vi b&aring;de <strong><code>union()</code></strong> och
-                        <strong><code>difference()</code></strong> f&ouml;r att hantera tre olika set.</p>
-                    <div class="code-container">
-                        <pre><code class="language-py"># Vi vill ta reda p&aring; vilka elever i matte 5-gruppen 
+</code></pre></div>
+</article><article><h4 class="tag_advanced" id="forena-tva-set-union"><span class="heading-nr">7.4 </span>F&ouml;rena tv&aring; set: union()<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#forena-tva-set-union">#</a></h4>
+<p>Med metoden <strong><code>union()</code></strong> kan man f&ouml;rena tv&aring; set. I exemplet nedan anv&auml;nder vi b&aring;de <strong><code>union()</code></strong> och <strong><code>difference()</code></strong> f&ouml;r att hantera tre olika set.</p>
+<div class="code-container"><pre><code class="language-py"># Vi vill ta reda p&aring; vilka elever i matte 5-gruppen 
 # som inte g&aring;r teknik eller natur
 
 # Teknikelever
@@ -999,18 +576,10 @@ other = ma5_group.difference(te_and_na)
 print(other)
 
 # &rarr; {'Wincent', 'Ulf', 'Victor'}
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_intermediate" id="delmangd-issubset"><span class="heading-nr">7.5
-                        </span>Delm&auml;ngd - issubset()<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#delmangd-issubset">#</a></h4>
-                    <p>Om man vill se om alla v&auml;rden i ett set finns i ett annat set kan man anv&auml;nda metoden
-                        <strong><code>issubset</code></strong>. (Med matematiska begrepp vill vi allts&aring;
-                        kontrollera om en m&auml;ngd &auml;r en <em>delm&auml;ngd</em> av en annan m&auml;ngd.)</p>
-                    <div class="code-container">
-                        <pre><code class="language-py"># Teknikelever
+</code></pre></div>
+</article><article><h4 class="tag_intermediate" id="delmangd-issubset"><span class="heading-nr">7.5 </span>Delm&auml;ngd - issubset()<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#delmangd-issubset">#</a></h4>
+<p>Om man vill se om alla v&auml;rden i ett set finns i ett annat set kan man anv&auml;nda metoden <strong><code>issubset</code></strong>. (Med matematiska begrepp vill vi allts&aring; kontrollera om en m&auml;ngd &auml;r en <em>delm&auml;ngd</em> av en annan m&auml;ngd.)</p>
+<div class="code-container"><pre><code class="language-py"># Teknikelever
 te_class = {'Adrian', 'Berit', 'Cathrine', 'Didrik', 'Eivor', 
             'Fanny', 'Gert', 'Hans', 'Igor', 'Jannike'}
 
@@ -1020,28 +589,13 @@ a_students = {'Gert', 'Berit', 'Eivor', 'Fanny'}
 print(a_students.issubset(te_class))
 
 # &rarr; True
-</code></pre>
-                    </div>
-                </article>
-            </section>
-            <section>
-                <h2 id="decorators"><span class="heading-nr">8. </span>Decorators<a class="perma-link"
-                        data-link="https://python.ostrawebb.se/fortsattning.html#decorators">#</a></h2>
-                <h3 class="tag_advanced" id="vad-ar-en-decorator"><span class="heading-nr">8.1 </span>Vad &auml;r en
-                    decorator?<a class="perma-link"
-                        href="https://python.ostrawebb.se/fortsattning.html#vad-ar-en-decorator">#</a></h3>
-                <p>En <strong>decorator</strong> &auml;r ett s&auml;tt att &ldquo;l&auml;gga till funktionalitet&rdquo;
-                    till en befintlig funktion, utan att &auml;ndra sj&auml;lva funktionen. Det g&ouml;r man genom att
-                    &ldquo;omsluta&rdquo; funktionen med en annan funktion som k&ouml;rs f&ouml;re eller efter
-                    huvudfunktionen.</p>
-                <p>I exemplet nedan har vi en decorator som kontrollerar om anv&auml;ndaren &auml;r inloggad innan
-                    funktionen k&ouml;rs.</p>
-                <article>
-                    <h4 class="tag_advanced" id="exempel-pa-decorator"><span class="heading-nr">8.2 </span>Exempel
-                        p&aring; decorator<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#exempel-pa-decorator">#</a></h4>
-                    <div class="code-container">
-                        <pre><code class="language-py"># Simulerar en global variabel f&ouml;r inloggningsstatus
+</code></pre></div>
+</article></section><section><h2 id="decorators"><span class="heading-nr">8. </span>Decorators<a class="perma-link" data-link="https://python.ostrawebb.se/fortsattning.html#decorators">#</a></h2>
+<h3 class="tag_advanced" id="vad-ar-en-decorator"><span class="heading-nr">8.1 </span>Vad &auml;r en decorator?<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#vad-ar-en-decorator">#</a></h3>
+<p>En <strong>decorator</strong> &auml;r ett s&auml;tt att &ldquo;l&auml;gga till funktionalitet&rdquo; till en befintlig funktion, utan att &auml;ndra sj&auml;lva funktionen. Det g&ouml;r man genom att &ldquo;omsluta&rdquo; funktionen med en annan funktion som k&ouml;rs f&ouml;re eller efter huvudfunktionen.</p>
+<p>I exemplet nedan har vi en decorator som kontrollerar om anv&auml;ndaren &auml;r inloggad innan funktionen k&ouml;rs.</p>
+<article><h4 class="tag_advanced" id="exempel-pa-decorator"><span class="heading-nr">8.2 </span>Exempel p&aring; decorator<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#exempel-pa-decorator">#</a></h4>
+<div class="code-container"><pre><code class="language-py"># Simulerar en global variabel f&ouml;r inloggningsstatus
 user_logged_in = False
 
 # H&auml;r &auml;r v&aring;r decorator-funktion
@@ -1073,64 +627,38 @@ user_logged_in = True
 
 # Anropa funktionen som inloggad
 view_profile()
-</code></pre>
-                    </div>
-                </article>
-                <h3 class="tag_advanced" id="varfor-decorators-ar-anvandbara"><span class="heading-nr">8.3
-                    </span>Varf&ouml;r decorators &auml;r anv&auml;ndbara<a class="perma-link"
-                        href="https://python.ostrawebb.se/fortsattning.html#varfor-decorators-ar-anvandbara">#</a></h3>
-                <ul>
-                    <li>De l&aring;ter dig &aring;teranv&auml;nda logik (t.ex. r&auml;ttighetskontroller, loggning,
-                        tidsm&auml;tning) utan att upprepa kod. </li>
-                    <li>Du kan enkelt l&auml;gga till eller ta bort funktionalitet bara genom att l&auml;gga till eller
-                        ta bort en rad (<code>@decorator</code>). </li>
-                    <li>De anv&auml;nds ofta i webbramverk som Flask eller Django.</li>
-                </ul>
+</code></pre></div>
+</article><h3 class="tag_advanced" id="varfor-decorators-ar-anvandbara"><span class="heading-nr">8.3 </span>Varf&ouml;r decorators &auml;r anv&auml;ndbara<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#varfor-decorators-ar-anvandbara">#</a></h3>
+<ul>
+<li>De l&aring;ter dig &aring;teranv&auml;nda logik (t.ex. r&auml;ttighetskontroller, loggning, tidsm&auml;tning) utan att upprepa kod.  </li>
+<li>Du kan enkelt l&auml;gga till eller ta bort funktionalitet bara genom att l&auml;gga till eller ta bort en rad (<code>@decorator</code>).  </li>
+<li>De anv&auml;nds ofta i webbramverk som Flask eller Django.</li>
+</ul>
 
 
-                <h3 class="tag_advanced" id="vad-ar-args-och-kwargs"><span class="heading-nr">8.4 </span>Vad &auml;r
-                    *args och **kwargs?<a class="perma-link"
-                        href="https://python.ostrawebb.se/fortsattning.html#vad-ar-args-och-kwargs">#</a></h3>
-                <article>
-                    <h4 id="args"><span class="heading-nr">8.5 </span>*args<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#args">#</a></h4>
-                    <ul>
-                        <li>St&aring;r f&ouml;r <em>arguments</em>. </li>
-                        <li>Anv&auml;nds f&ouml;r att skicka ett <strong>obest&auml;mt antal positionella
-                                argument</strong> till en funktion. </li>
-                        <li>Argumenten samlas i en <strong>tuple</strong>.</li>
-                    </ul>
-                </article>
-                <article>
-                    <h4 class="tag_advanced" id="exempel-pa-args"><span class="heading-nr">8.6 </span>Exempel p&aring;
-                        *args<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#exempel-pa-args">#</a></h4>
-                    <div class="code-container">
-                        <pre><code class="language-py">def summa(*args):
+<h3 class="tag_advanced" id="vad-ar-args-och-kwargs"><span class="heading-nr">8.4 </span>Vad &auml;r *args och **kwargs?<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#vad-ar-args-och-kwargs">#</a></h3>
+<article><h4 id="args"><span class="heading-nr">8.5 </span>*args<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#args">#</a></h4>
+<ul>
+<li>St&aring;r f&ouml;r <em>arguments</em>.  </li>
+<li>Anv&auml;nds f&ouml;r att skicka ett <strong>obest&auml;mt antal positionella argument</strong> till en funktion.  </li>
+<li>Argumenten samlas i en <strong>tuple</strong>.</li>
+</ul>
+</article><article><h4 class="tag_advanced" id="exempel-pa-args"><span class="heading-nr">8.6 </span>Exempel p&aring; *args<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#exempel-pa-args">#</a></h4>
+<div class="code-container"><pre><code class="language-py">def summa(*args):
     """Sums all arguments"""
     return sum(args)
 
 print(summa(1, 2, 3))  # &rarr; 6
 print(summa(5, 10))    # &rarr; 15
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 id="kwargs"><span class="heading-nr">8.7 </span>**kwargs<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#kwargs">#</a></h4>
-                    <ul>
-                        <li>St&aring;r f&ouml;r <em>keyword arguments</em>. </li>
-                        <li>Anv&auml;nds f&ouml;r att skicka ett <strong>obest&auml;mt antal namngivna
-                                argument</strong>. </li>
-                        <li>Argumenten samlas i en <strong>dictionary</strong>.</li>
-                    </ul>
-                </article>
-                <article>
-                    <h4 class="tag_advanced" id="exempel-pa-kwargs"><span class="heading-nr">8.8 </span>Exempel p&aring;
-                        **kwargs<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#exempel-pa-kwargs">#</a></h4>
-                    <div class="code-container">
-                        <pre><code class="language-py">def print_key_and_value(**kwargs):
+</code></pre></div>
+</article><article><h4 id="kwargs"><span class="heading-nr">8.7 </span>**kwargs<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#kwargs">#</a></h4>
+<ul>
+<li>St&aring;r f&ouml;r <em>keyword arguments</em>.  </li>
+<li>Anv&auml;nds f&ouml;r att skicka ett <strong>obest&auml;mt antal namngivna argument</strong>.  </li>
+<li>Argumenten samlas i en <strong>dictionary</strong>.</li>
+</ul>
+</article><article><h4 class="tag_advanced" id="exempel-pa-kwargs"><span class="heading-nr">8.8 </span>Exempel p&aring; **kwargs<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#exempel-pa-kwargs">#</a></h4>
+<div class="code-container"><pre><code class="language-py">def print_key_and_value(**kwargs):
     """Print key and value from keyword arguments"""
     for key, value in kwargs.items():
         print(f"{key} = {value}")
@@ -1140,16 +668,9 @@ skriv_ut(name="Elmo", breed="Cavapoo")
 # &rarr; name = Elmo
 #    breed = Cavapoo
 
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_advanced" id="kombination-av-args-och-kwargs"><span class="heading-nr">8.9
-                        </span>Kombination av *args och **kwargs<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#kombination-av-args-och-kwargs">#</a>
-                    </h4>
-                    <div class="code-container">
-                        <pre><code class="language-py">def exempel(*args, **kwargs):
+</code></pre></div>
+</article><article><h4 class="tag_advanced" id="kombination-av-args-och-kwargs"><span class="heading-nr">8.9 </span>Kombination av *args och **kwargs<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#kombination-av-args-och-kwargs">#</a></h4>
+<div class="code-container"><pre><code class="language-py">def exempel(*args, **kwargs):
     """Prints arguments and keyword arguments"""
     print("args:", args)
     print("kwargs:", kwargs)
@@ -1158,25 +679,12 @@ exempel(1, 2, 3, a=4, b=5)
 
 # &rarr; args: (1, 2, 3)
 # &rarr; kwargs: {'a': 4, 'b': 5}
-</code></pre>
-                    </div>
-                </article>
-            </section>
-            <section>
-                <h2 id="rekursion"><span class="heading-nr">9. </span>Rekursion<a class="perma-link"
-                        data-link="https://python.ostrawebb.se/fortsattning.html#rekursion">#</a></h2>
-                <p><em>Rekursion</em> &auml;r n&auml;r en funktion anropar sig sj&auml;lv, som i sin tur anropar sig
-                    sj&auml;lv etc. Det anv&auml;nds inom programmering f&ouml;r att l&ouml;sa matematiska problem eller
-                    f&ouml;r att g&aring; igenom tr&auml;dstrukturer som till exempel ett filsystem.</p>
-                <article>
-                    <h4 class="tag_advanced" id="berakna-fakultet"><span class="heading-nr">9.1 </span>Ber&auml;kna
-                        fakultet<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#berakna-fakultet">#</a></h4>
-                    <p>Fakulteten &auml;r summan av produkten av alla positiva heltal fr&aring;n 1 upp till och med ett
-                        visst nummer. Fakulteten f&ouml;r 5 &auml;r allts&aring;: 1 x 2 x 3 x 4 x 5 \= 120. En funktion
-                        som r&auml;knar ut fakulteten f&ouml;r ett nummer med rekursion kan se ut s&aring; h&auml;r:</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">def factorial(n):
+</code></pre></div>
+</article></section><section><h2 id="rekursion"><span class="heading-nr">9. </span>Rekursion<a class="perma-link" data-link="https://python.ostrawebb.se/fortsattning.html#rekursion">#</a></h2>
+<p><em>Rekursion</em> &auml;r n&auml;r en funktion anropar sig sj&auml;lv, som i sin tur anropar sig sj&auml;lv etc. Det anv&auml;nds inom programmering f&ouml;r att l&ouml;sa matematiska problem eller f&ouml;r att g&aring; igenom tr&auml;dstrukturer som till exempel ett filsystem.</p>
+<article><h4 class="tag_advanced" id="berakna-fakultet"><span class="heading-nr">9.1 </span>Ber&auml;kna fakultet<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#berakna-fakultet">#</a></h4>
+<p>Fakulteten &auml;r summan av produkten av alla positiva heltal fr&aring;n 1 upp till och med ett visst nummer. Fakulteten f&ouml;r 5 &auml;r allts&aring;: 1 x 2 x 3 x 4 x 5 \= 120. En funktion som r&auml;knar ut fakulteten f&ouml;r ett nummer med rekursion kan se ut s&aring; h&auml;r:</p>
+<div class="code-container"><pre><code class="language-py">def factorial(n):
     """Calculate factorial for number n"""
 
     # Ifall numret &auml;r 0 eller 1 avsluta med att returnera 1
@@ -1189,18 +697,10 @@ exempel(1, 2, 3, a=4, b=5)
 print(factorial(5))
 
 # &rarr; 120
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_advanced" id="fibonnaci-serien"><span class="heading-nr">9.2
-                        </span>Fibonnaci-serien<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#fibonnaci-serien">#</a></h4>
-                    <p>Fibonaccis talf&ouml;ljd &auml;r en v&auml;lk&auml;nd talf&ouml;ljd d&auml;r varje tal &auml;r
-                        summan av de tv&aring; f&ouml;reg&aring;ende Fibonaccitalen. De tv&aring; f&ouml;rsta talen i
-                        serien &auml;r 0 och 1. En Fibonnaci-serie g&aring;r enkelt att skapa med rekursion:</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">def fibonacci(n):
+</code></pre></div>
+</article><article><h4 class="tag_advanced" id="fibonnaci-serien"><span class="heading-nr">9.2 </span>Fibonnaci-serien<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#fibonnaci-serien">#</a></h4>
+<p>Fibonaccis talf&ouml;ljd &auml;r en v&auml;lk&auml;nd talf&ouml;ljd d&auml;r varje tal &auml;r summan av de tv&aring; f&ouml;reg&aring;ende Fibonaccitalen. De tv&aring; f&ouml;rsta talen i serien &auml;r 0 och 1. En Fibonnaci-serie g&aring;r enkelt att skapa med rekursion:</p>
+<div class="code-container"><pre><code class="language-py">def fibonacci(n):
     if n == 0:
         return 0
     elif n == 1:
@@ -1210,18 +710,10 @@ print(factorial(5))
 
 fib_series = [fibonacci(n) for n in range(10)]
 print(fib_series)  
-</code></pre>
-                    </div>
-                </article>
-                <article>
-                    <h4 class="tag_advanced" id="genomgang-av-filsystem"><span class="heading-nr">9.3
-                        </span>Genomg&aring;ng av filsystem<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#genomgang-av-filsystem">#</a></h4>
-                    <p>H&auml;r anv&auml;nds modulen <strong><code>os</code></strong> tillsammans med rekursion f&ouml;r
-                        att lista alla filer i en mapp. N&auml;r funktionen st&ouml;ter p&aring; en undermapp listas den
-                        mappen ocks&aring; genom att anropa funktionen igen (med rekursion).</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">import os
+</code></pre></div>
+</article><article><h4 class="tag_advanced" id="genomgang-av-filsystem"><span class="heading-nr">9.3 </span>Genomg&aring;ng av filsystem<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#genomgang-av-filsystem">#</a></h4>
+<p>H&auml;r anv&auml;nds modulen <strong><code>os</code></strong> tillsammans med rekursion f&ouml;r att lista alla filer i en mapp. N&auml;r funktionen st&ouml;ter p&aring; en undermapp listas den mappen ocks&aring; genom att anropa funktionen igen (med rekursion).</p>
+<div class="code-container"><pre><code class="language-py">import os
 
 def list_files(folder):
     """Prints all files and folder, including subfolders."""
@@ -1235,23 +727,11 @@ def list_files(folder):
 # Exempel: lista alla filer i mappen 'images'
 list_files("images")
 
-</code></pre>
-                    </div>
-                </article>
-            </section>
-            <section>
-                <h2 id="kryptering"><span class="heading-nr">10. </span>Kryptering<a class="perma-link"
-                        data-link="https://python.ostrawebb.se/fortsattning.html#kryptering">#</a></h2>
-                <article>
-                    <h4 class="tag_advanced" id="enkel-manuell-kryptering"><span class="heading-nr">10.1 </span>Enkel
-                        manuell kryptering<a class="perma-link"
-                            href="https://python.ostrawebb.se/fortsattning.html#enkel-manuell-kryptering">#</a></h4>
-                    <p>Med funktionen <strong><code>ord</code></strong> f&ouml;r man ett teckens <a
-                            href="https://sv.wikipedia.org/wiki/Unicode">Unicode</a>-v&auml;rde. (Ett heltal mellan 1
-                        och 1114111. ) Funktionen <strong><code>chr</code></strong> g&ouml;r det motsatta - returnerar
-                        ett tecken fr&aring;n ett Unicode-v&auml;rde.</p>
-                    <div class="code-container">
-                        <pre><code class="language-py">def encode(message):
+</code></pre></div>
+</article></section><section><h2 id="kryptering"><span class="heading-nr">10. </span>Kryptering<a class="perma-link" data-link="https://python.ostrawebb.se/fortsattning.html#kryptering">#</a></h2>
+<article><h4 class="tag_advanced" id="enkel-manuell-kryptering"><span class="heading-nr">10.1 </span>Enkel manuell kryptering<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#enkel-manuell-kryptering">#</a></h4>
+<p>Med funktionen <strong><code>ord</code></strong> f&ouml;r man ett teckens <a href="https://sv.wikipedia.org/wiki/Unicode">Unicode</a>-v&auml;rde. (Ett heltal mellan 1 och 1114111. ) Funktionen <strong><code>chr</code></strong> g&ouml;r det motsatta - returnerar ett tecken fr&aring;n ett Unicode-v&auml;rde.</p>
+<div class="code-container"><pre><code class="language-py">def encode(message):
     """Returns a list of Unicode values."""
     return [ord(l) for l in message]
 
@@ -1264,239 +744,146 @@ coded_message = encode("I like Python")
 print(coded_message)
 print(decode(coded_message))
 
-</code></pre>
-                    </div>
-                </article>
-                <h3 id="hashing"><span class="heading-nr">10.2 </span>Hashing<a class="perma-link"
-                        href="https://python.ostrawebb.se/fortsattning.html#hashing">#</a></h3>
-            </section>
-            <section>
-                <h2 id="kombinatorik"><span class="heading-nr">11. </span>Kombinatorik<a class="perma-link"
-                        data-link="https://python.ostrawebb.se/fortsattning.html#kombinatorik">#</a></h2>
-                <p>* Kombinationer</p>
-                <p>* Permutationer</p>
-                <p>* Produkt</p>
-            </section>
-            <section>
-                <h2 id="pythons-standardbibliotek"><span class="heading-nr">12. </span>Pythons standardbibliotek<a
-                        class="perma-link"
-                        data-link="https://python.ostrawebb.se/fortsattning.html#pythons-standardbibliotek">#</a></h2>
-                <p>Det finns omkring 300 moduler i Pythons inbyggda standardbibliotek. H&auml;r kommer en lista av de
-                    mest anv&auml;nda med en beskrivning vad de anv&auml;nds till:</p>
-                <div class="table-container">
-                    <table>
-                        <thead>
-                            <tr>
-                                <th style="text-align: left;">Modul</th>
-                                <th style="text-align: left;">Beskrivning</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/math.html"><strong>math</strong></a>
-                                </td>
-                                <td style="text-align: left;">Ger matematiska funktioner (t.ex. sinus, logaritmer, &pi;,
-                                    e).</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/random.html"><strong>random</strong></a>
-                                </td>
-                                <td style="text-align: left;">Slumptalsgenerering och val av slumpm&auml;ssiga element.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/statistics.html"><strong>statistics</strong></a>
-                                </td>
-                                <td style="text-align: left;">Grundl&auml;ggande statistiska ber&auml;kningar som
-                                    medelv&auml;rde och standardavvikelse.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/decimal.html"><strong>decimal</strong></a>
-                                </td>
-                                <td style="text-align: left;">Exakta ber&auml;kningar med decimaltal (anv&auml;ndbart
-                                    f&ouml;r pengar).</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/fractions.html"><strong>fractions</strong></a>
-                                </td>
-                                <td style="text-align: left;">Hantering av rationella tal (br&aring;k).</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/os.html"><strong>os</strong></a></td>
-                                <td style="text-align: left;">Interaktion med operativsystemet, t.ex. filer och
-                                    kataloger.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/sys.html"><strong>sys</strong></a>
-                                </td>
-                                <td style="text-align: left;">Systeminformation, programargument och tolkens
-                                    inst&auml;llningar.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/pathlib.html"><strong>pathlib</strong></a>
-                                </td>
-                                <td style="text-align: left;">Objektorienterat s&auml;tt att hantera filer och
-                                    s&ouml;kv&auml;gar.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/shutil.html"><strong>shutil</strong></a>
-                                </td>
-                                <td style="text-align: left;">Kopiering, flyttning och radering av filer och mappar.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/io.html"><strong>io</strong></a></td>
-                                <td style="text-align: left;">Avancerad filhantering och datafl&ouml;den (streams).</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/datetime.html"><strong>datetime</strong></a>
-                                </td>
-                                <td style="text-align: left;">Hantering av datum, tider och tidsintervall.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/time.html"><strong>time</strong></a>
-                                </td>
-                                <td style="text-align: left;">Tidtagning och pauser (sleep).</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/calendar.html"><strong>calendar</strong></a>
-                                </td>
-                                <td style="text-align: left;">Arbeta med kalendrar, veckodagar och datum.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/urllib.html"><strong>urllib</strong></a>
-                                </td>
-                                <td style="text-align: left;">H&auml;mta data fr&aring;n webben och hantera
-                                    webbadresser.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/http.html"><strong>http</strong></a>
-                                </td>
-                                <td style="text-align: left;">Skapa HTTP-klienter och -servrar.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/socket.html"><strong>socket</strong></a>
-                                </td>
-                                <td style="text-align: left;">L&aring;g niv&aring;-n&auml;tverkskommunikation (TCP/UDP).
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/re.html"><strong>re</strong></a></td>
-                                <td style="text-align: left;">Regulj&auml;ra uttryck f&ouml;r avancerad textmatchning.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/argparse.html"><strong>argparse</strong></a>
-                                </td>
-                                <td style="text-align: left;">Hantering av kommandoradsargument.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/logging.html"><strong>logging</strong></a>
-                                </td>
-                                <td style="text-align: left;">System f&ouml;r loggning och fels&ouml;kning.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/json.html"><strong>json</strong></a>
-                                </td>
-                                <td style="text-align: left;">L&auml;sning och skrivning av JSON-data (vanligt i
-                                    webbtj&auml;nster).</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/csv.html"><strong>csv</strong></a>
-                                </td>
-                                <td style="text-align: left;">L&auml;sning och skrivning av CSV-filer (tabellformade
-                                    data).</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/pickle.html"><strong>pickle</strong></a>
-                                </td>
-                                <td style="text-align: left;">Spara och l&auml;sa Python-objekt i bin&auml;rt format.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/collections.html"><strong>collections</strong></a>
-                                </td>
-                                <td style="text-align: left;">Extra datastrukturer som <code>Counter</code>,
-                                    <code>deque</code> och <code>defaultdict</code>.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/itertools.html"><strong>itertools</strong></a>
-                                </td>
-                                <td style="text-align: left;">Effektiva verktyg f&ouml;r iterationer och kombinationer.
-                                </td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/functools.html"><strong>functools</strong></a>
-                                </td>
-                                <td style="text-align: left;">Funktioner som <code>reduce</code>, <code>lru_cache</code>
-                                    och <code>partial</code>.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/heapq.html"><strong>heapq</strong></a>
-                                </td>
-                                <td style="text-align: left;">Prioritetsk&ouml;er och heap-baserade algoritmer.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/unittest.html"><strong>unittest</strong></a>
-                                </td>
-                                <td style="text-align: left;">Ramverk f&ouml;r att skriva och k&ouml;ra tester.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/doctest.html"><strong>doctest</strong></a>
-                                </td>
-                                <td style="text-align: left;">Testar kodexempel direkt i dokumentationen.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/pdb.html"><strong>pdb</strong></a>
-                                </td>
-                                <td style="text-align: left;">Fels&ouml;kning av program steg f&ouml;r steg.</td>
-                            </tr>
-                            <tr>
-                                <td style="text-align: left;"><a
-                                        href="https://docs.python.org/3.14/library/zipfile.html"><strong>zipfile</strong></a>
-                                    / <a
-                                        href="https://docs.python.org/3.14/library/tarfile.html"><strong>tarfile</strong></a>
-                                    / <a href="https://docs.python.org/3.14/library/gzip.html"><strong>gzip</strong></a>
-                                </td>
-                                <td style="text-align: left;">Hantering av komprimerade arkivfiler.</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </section>
-        </main>
-    </div>
-    <script src="js/main.js"></script>
-    <script>hljs.highlightAll();</script>
+</code></pre></div>
+</article><h3 id="hashing"><span class="heading-nr">10.2 </span>Hashing<a class="perma-link" href="https://python.ostrawebb.se/fortsattning.html#hashing">#</a></h3>
+</section><section><h2 id="kombinatorik"><span class="heading-nr">11. </span>Kombinatorik<a class="perma-link" data-link="https://python.ostrawebb.se/fortsattning.html#kombinatorik">#</a></h2>
+<p>* Kombinationer</p>
+<p>* Permutationer</p>
+<p>* Produkt</p>
+</section><section><h2 id="pythons-standardbibliotek"><span class="heading-nr">12. </span>Pythons standardbibliotek<a class="perma-link" data-link="https://python.ostrawebb.se/fortsattning.html#pythons-standardbibliotek">#</a></h2>
+<p>Det finns omkring 300 moduler i Pythons inbyggda standardbibliotek. H&auml;r kommer en lista av de mest anv&auml;nda med en beskrivning vad de anv&auml;nds till:</p>
+<div class="table-container"><table>
+<thead>
+<tr>
+<th style="text-align: left;">Modul</th>
+<th style="text-align: left;">Beskrivning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/math.html"><strong>math</strong></a></td>
+<td style="text-align: left;">Ger matematiska funktioner (t.ex. sinus, logaritmer, &pi;, e).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/random.html"><strong>random</strong></a></td>
+<td style="text-align: left;">Slumptalsgenerering och val av slumpm&auml;ssiga element.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/statistics.html"><strong>statistics</strong></a></td>
+<td style="text-align: left;">Grundl&auml;ggande statistiska ber&auml;kningar som medelv&auml;rde och standardavvikelse.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/decimal.html"><strong>decimal</strong></a></td>
+<td style="text-align: left;">Exakta ber&auml;kningar med decimaltal (anv&auml;ndbart f&ouml;r pengar).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/fractions.html"><strong>fractions</strong></a></td>
+<td style="text-align: left;">Hantering av rationella tal (br&aring;k).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/os.html"><strong>os</strong></a></td>
+<td style="text-align: left;">Interaktion med operativsystemet, t.ex. filer och kataloger.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/sys.html"><strong>sys</strong></a></td>
+<td style="text-align: left;">Systeminformation, programargument och tolkens inst&auml;llningar.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/pathlib.html"><strong>pathlib</strong></a></td>
+<td style="text-align: left;">Objektorienterat s&auml;tt att hantera filer och s&ouml;kv&auml;gar.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/shutil.html"><strong>shutil</strong></a></td>
+<td style="text-align: left;">Kopiering, flyttning och radering av filer och mappar.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/io.html"><strong>io</strong></a></td>
+<td style="text-align: left;">Avancerad filhantering och datafl&ouml;den (streams).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/datetime.html"><strong>datetime</strong></a></td>
+<td style="text-align: left;">Hantering av datum, tider och tidsintervall.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/time.html"><strong>time</strong></a></td>
+<td style="text-align: left;">Tidtagning och pauser (sleep).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/calendar.html"><strong>calendar</strong></a></td>
+<td style="text-align: left;">Arbeta med kalendrar, veckodagar och datum.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/urllib.html"><strong>urllib</strong></a></td>
+<td style="text-align: left;">H&auml;mta data fr&aring;n webben och hantera webbadresser.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/http.html"><strong>http</strong></a></td>
+<td style="text-align: left;">Skapa HTTP-klienter och -servrar.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/socket.html"><strong>socket</strong></a></td>
+<td style="text-align: left;">L&aring;g niv&aring;-n&auml;tverkskommunikation (TCP/UDP).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/re.html"><strong>re</strong></a></td>
+<td style="text-align: left;">Regulj&auml;ra uttryck f&ouml;r avancerad textmatchning.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/argparse.html"><strong>argparse</strong></a></td>
+<td style="text-align: left;">Hantering av kommandoradsargument.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/logging.html"><strong>logging</strong></a></td>
+<td style="text-align: left;">System f&ouml;r loggning och fels&ouml;kning.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/json.html"><strong>json</strong></a></td>
+<td style="text-align: left;">L&auml;sning och skrivning av JSON-data (vanligt i webbtj&auml;nster).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/csv.html"><strong>csv</strong></a></td>
+<td style="text-align: left;">L&auml;sning och skrivning av CSV-filer (tabellformade data).</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/pickle.html"><strong>pickle</strong></a></td>
+<td style="text-align: left;">Spara och l&auml;sa Python-objekt i bin&auml;rt format.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/collections.html"><strong>collections</strong></a></td>
+<td style="text-align: left;">Extra datastrukturer som <code>Counter</code>, <code>deque</code> och <code>defaultdict</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/itertools.html"><strong>itertools</strong></a></td>
+<td style="text-align: left;">Effektiva verktyg f&ouml;r iterationer och kombinationer.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/functools.html"><strong>functools</strong></a></td>
+<td style="text-align: left;">Funktioner som <code>reduce</code>, <code>lru_cache</code> och <code>partial</code>.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/heapq.html"><strong>heapq</strong></a></td>
+<td style="text-align: left;">Prioritetsk&ouml;er och heap-baserade algoritmer.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/unittest.html"><strong>unittest</strong></a></td>
+<td style="text-align: left;">Ramverk f&ouml;r att skriva och k&ouml;ra tester.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/doctest.html"><strong>doctest</strong></a></td>
+<td style="text-align: left;">Testar kodexempel direkt i dokumentationen.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/pdb.html"><strong>pdb</strong></a></td>
+<td style="text-align: left;">Fels&ouml;kning av program steg f&ouml;r steg.</td>
+</tr>
+<tr>
+<td style="text-align: left;"><a href="https://docs.python.org/3.14/library/zipfile.html"><strong>zipfile</strong></a> / <a href="https://docs.python.org/3.14/library/tarfile.html"><strong>tarfile</strong></a> / <a href="https://docs.python.org/3.14/library/gzip.html"><strong>gzip</strong></a></td>
+<td style="text-align: left;">Hantering av komprimerade arkivfiler.</td>
+</tr>
+</tbody>
+</table></div></section></main>
+</div>
+<script src="js/main.js"></script>
+<script>hljs.highlightAll();</script>
 </body>
-
 </html>
