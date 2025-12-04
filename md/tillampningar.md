@@ -51,7 +51,7 @@ Klassen **`ImageOps`** innehåller flera metoder för att förändra en bild.
 ```py
 from PIL import Image, ImageOps
 
-with Image.open('food_img/sushi.jpg') as img:
+with Image.open('image.jpg') as img:
     # Inverterar alla pixlar över ett visst gränsvärde
     img = ImageOps.solarize(img, 60)
 
@@ -70,7 +70,7 @@ with Image.open('food_img/sushi.jpg') as img:
     # Spegelvänder en bild
     img = ImageOps.mirror(img)
 
-    img.save('img/newstuff.png')
+    img.save('img/newimage.jpg')
 ```
 
 #### 

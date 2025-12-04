@@ -79,7 +79,7 @@ emo_dog.save("emo_dog.jpg")
 <p>Klassen <strong><code>ImageOps</code></strong> inneh&aring;ller flera metoder f&ouml;r att f&ouml;r&auml;ndra en bild. </p>
 <div class="code-container"><pre><code class="language-py">from PIL import Image, ImageOps
 
-with Image.open('food_img/sushi.jpg') as img:
+with Image.open('image.jpg') as img:
     # Inverterar alla pixlar &ouml;ver ett visst gr&auml;nsv&auml;rde
     img = ImageOps.solarize(img, 60)
 
@@ -98,7 +98,7 @@ with Image.open('food_img/sushi.jpg') as img:
     # Spegelv&auml;nder en bild
     img = ImageOps.mirror(img)
 
-    img.save('img/newstuff.png')
+    img.save('img/newimage.jpg')
 </code></pre></div>
 
 </article><article><h4 id="skapa-en-animerad-gif-bild"><span class="heading-nr">1.4 </span>Skapa en animerad GIF-bild<a class="perma-link" href="https://python.ostrawebb.se/tillampningar.html#skapa-en-animerad-gif-bild">#</a></h4>
