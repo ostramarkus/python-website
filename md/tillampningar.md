@@ -243,7 +243,7 @@ plt.show()
 
 **Web scraping** är tekniken att **hämta innehåll från webbsidor automatiskt** med ett program istället för att kopiera den manuellt. Det används ofta för att samla in information från sajter som inte erbjuder ett API.
 
-Två vanliga Python-moduler för web scraping är:
+Två vanliga Python-moduler för webbscraping är:
 
 * [**requests**](https://requests.readthedocs.io/en/latest/) – används för att **hämta HTML-innehållet** från en webbsida.  
 * [**BeautifulSoup**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) – används för att **bearbeta och analysera HTML-koden**, så att man kan hitta och extrahera den data man vill ha.
@@ -320,6 +320,19 @@ main_links = soup.select("#main-nav a")
 for link in main_links:
   print(link.text)
 ```
+
+### **Undvik för många anrop samtidigt**
+
+Om man vill göra många anrop i följd till en server är det bäst att ha en kort paus mellan anropen. Detta för att inte överbelasta servern (eller trigga skydd mot överbelastningsattacker).
+
+```py
+import time
+time.sleep(1)
+```
+
+## 
+
+## 
 
 ## **Effektiva numeriska listor med NumPy**
 
