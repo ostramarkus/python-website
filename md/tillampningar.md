@@ -239,11 +239,11 @@ plt.show()
 
 ![][image7]
 
-## **Webbscraping**
+## **Web scraping**
 
-**Webbscraping** är tekniken att **hämta innehåll från webbsidor automatiskt** med ett program istället för att kopiera den manuellt. Det används ofta för att samla in information från sajter som inte erbjuder ett API.
+**Web scraping** är tekniken att **hämta innehåll från webbsidor automatiskt** med ett program istället för att kopiera den manuellt. Det används ofta för att samla in information från sajter som inte erbjuder ett API.
 
-Två vanliga Python-moduler för webbscraping är:
+Två vanliga Python-moduler för web scraping är:
 
 * [**requests**](https://requests.readthedocs.io/en/latest/) – används för att **hämta HTML-innehållet** från en webbsida.  
 * [**BeautifulSoup**](https://www.crummy.com/software/BeautifulSoup/bs4/doc/) – används för att **bearbeta och analysera HTML-koden**, så att man kan hitta och extrahera den data man vill ha.
