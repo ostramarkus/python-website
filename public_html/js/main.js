@@ -149,3 +149,22 @@ const observer = new IntersectionObserver(
 );
 
 sections.forEach((section) => observer.observe(section));
+
+// Focus code
+
+const examples = document.querySelectorAll(".code-container");
+const modal = document.getElementById("code-modal");
+const modalContent = document.getElementById("code-modal-content");
+
+examples.forEach(example => {
+  example.addEventListener("click", () => {
+    modalContent.innerHTML = example.innerHTML;
+    modal.style.display = "flex";
+  });
+});
+
+modal.addEventListener("click", (e) => {
+  if (e.target === modal) {
+    modal.style.display = "none";
+  }
+});
