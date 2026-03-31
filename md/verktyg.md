@@ -230,10 +230,77 @@ De flesta servrar kör operativsystemet Linux (där den populäraste varianten �
 | **`date`** | Visar aktuellt datum och tid |
 | **`groups`** | Visar vilka grupper den man tillhör |
 
+## 
+
+## **Notebooks**
+
+En notebook är en interaktiv miljö där du kan skriva och köra Python-kod i små delar, steg för steg. Den vanligaste typen är en **Jupyter Notebook**.
+
+Exempel på notebook-miljöer:
+
+* Jupyter Notebook  
+* Github Codespace  
+* Deepnote
+
+Varför använda notebooks?
+
+ ✅ Bra för dataanalys  
+ ✅ Kombinerar kod \+ text \+ visualisering  
+ ✅ Lätt att experimentera
+
+### **Hur är en notebook uppbyggd?**
+
+En notebook består av **celler**. Det finns främst två typer:
+
+#### **1\. Kodceller**
+
+Här skriver du Python-kod.
+
+```py
+print("Hej världen!")
+```
+
+När du kör cellen körs bara den koden – inte hela programmet.
+
+I en notebook behöver du inte ange print för att skriva ut en variabel eller resultatet av en funktion. Om man anger en variabel eller ett funktionsanrop sist i en kod-cell skrivs värdet automatiskt ut.
+
+#### **2\. Textceller (Markdown)**
+
+Här skriver du text, instruktioner eller förklaringar i Markdown-format. Se [https://www.markdownguide.org/cheat-sheet/](https://www.markdownguide.org/cheat-sheet/)
+
+Exempel:
+
+* Rubriker  
+* Listor  
+* **Fetstil**  
+* Kodexempel
+
+### **Hur kör man kod?**
+
+Du kan köra en cell genom att:
+
+* Trycka **Shift \+ Enter**  
+* Klicka på “Run”-knappen
+
+Resultatet visas direkt under cellen.
+
+### **Viktigt att förstå: Ordning spelar roll**
+
+Notebook-kod körs i den ordning DU kör den – inte alltid uppifrån och ner.
+
+Det kan skapa problem:
+
+```py
+print(x)  # Fel om x inte körts tidigare
+```
+
+Tips: Kör alltid om hela notebooken om något känns konstigt.
+
+
+
 ## **Pakethantering och virtualenv**
 
 ## **IPython**
 
 ## **Unit testing (enhetstestning)**
 
-## **Notebooks**
