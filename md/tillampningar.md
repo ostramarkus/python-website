@@ -520,6 +520,13 @@ print(df)
 df = pd.read_csv("data.csv")
 ```
 
+### **Undersöka Dataframe** 
+
+```py
+print(df.head()) # Skriv ut de första raderna
+print(df.describe()) # Skriv ut en statistisk sammanfattning
+```
+
 ### **Filtrera Dataframe**
 
 ```py
