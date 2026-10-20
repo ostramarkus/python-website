@@ -12,7 +12,7 @@ Det finns tre huvudsakliga sätt att programmera Python:
 
 Det här är det enklaste sättet att komma igång med Python. Det finns många olika webbtjänster där man kan koda Python utan att behöva skapa ett konto eller installera något. Några exempel:
 
-* [Trinket.io](https://trinket.io/python3)  
+* [Coddy](https://coddy.tech/playground/python)  
 * [Programiz \- Online Python Compiler (Interpreter)](https://www.programiz.com/python-programming/online-compiler/)  
 * [Python Online Compiler & Interpreter](https://onecompiler.com/python)
 
